@@ -1,12 +1,80 @@
 # Bookly Realtime Support Agent
 
-A focused prototype for Decagon's Solutions Engineering take-home. It pairs a convincing bookstore storefront with an embedded customer-support and commerce agent powered by OpenAI `gpt-realtime-2.1`. Customers can type or speak, explore the catalog, build a synchronized cart, manage wishlist alerts, modify eligible orders, investigate shipments, create returns or replacements, complete guarded refunds, and escalate to simulated human support against real SQLite state.
+<p align="center">
+  <strong>A realtime commerce concierge that turns natural conversation into a visible, safe, and auditable customer journey.</strong>
+</p>
 
-## Thesis
+<p align="center">
+  <img alt="Next.js 16.3" src="https://img.shields.io/badge/Next.js-16.3-111111?style=flat-square&logo=next.js&logoColor=white" />
+  <img alt="GPT Realtime 2.1" src="https://img.shields.io/badge/Realtime-GPT--Realtime--2.1-174C3C?style=flat-square" />
+  <img alt="29 typed tools" src="https://img.shields.io/badge/Tools-29%20typed%20contracts-E66C4D?style=flat-square" />
+  <img alt="Text and voice" src="https://img.shields.io/badge/Interface-Text%20%2B%20voice-E6B947?style=flat-square" />
+</p>
 
-Great CX automation should be conversational at the surface and deterministic at the point of consequence. The model owns dialogue, clarification, and tool selection. Typed schemas, identity checks, policy retrieval, one-time confirmation tokens, database constraints, and transactions own truth and side effects.
+<p align="center">
+  <img src="./public/bookly-product-demo.gif" alt="Bookly conversation opening A Glass Horizon and adding the hardcover to the synchronized shopping bag" width="960" />
+</p>
 
-That separation lets the agent feel natural without letting natural language bypass business rules.
+<p align="center">
+  <sub>One live conversation: ground the answer, open the exact book beside the chat, select a format, and update the cart.</sub>
+</p>
+
+Bookly pairs a polished bookstore storefront with an embedded support and commerce agent powered by OpenAI `gpt-realtime-2.1`. Customers can type or speak in plain language while the agent navigates the catalog, updates the surrounding interface, and completes support workflows against real SQLite state.
+
+The product idea is simple: **conversation is the control surface, but it is not the system of record.** The model owns dialogue, clarification, and tool selection. Typed schemas, server-verified identity, policy retrieval, one-time confirmation tokens, database constraints, and transactions own truth and side effects.
+
+## One conversation, six customer journeys
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>🔎 Discover &amp; compare</strong><br />
+      <em>“Show me a character-driven science-fiction book.”</em><br /><br />
+      Semantic retrieval finds the right titles; an exact detail tool can open one beside the conversation.<br /><br />
+      <code>search_knowledge → open_book</code>
+    </td>
+    <td width="33%" valign="top">
+      <strong>🛒 Shop &amp; checkout</strong><br />
+      <em>“Add the hardcover and start checkout.”</em><br /><br />
+      Structured catalog data resolves the variant, price, and inventory before the storefront cart changes.<br /><br />
+      <code>search_catalog → add_to_cart → begin_checkout</code>
+    </td>
+    <td width="33%" valign="top">
+      <strong>📦 Account &amp; orders</strong><br />
+      <em>“Where is my latest order?”</em><br /><br />
+      A private inline form establishes identity; account tools receive server-owned customer context.<br /><br />
+      <code>authenticate_customer → lookup_order</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>🚚 Delivery recovery</strong><br />
+      <em>“It says delivered, but I can’t find it.”</em><br /><br />
+      The agent gathers required checks, shows carrier evidence, and opens a case only after confirmation.<br /><br />
+      <code>investigate_shipment → open_shipping_investigation</code>
+    </td>
+    <td width="33%" valign="top">
+      <strong>↩️ Returns &amp; resolution</strong><br />
+      <em>“Refund the damaged hardcover.”</em><br /><br />
+      Eligibility and exact amounts are prepared first; a later turn confirms the transactional action.<br /><br />
+      <code>prepare_refund → process_refund</code>
+    </td>
+    <td width="33%" valign="top">
+      <strong>🙋 Human escalation</strong><br />
+      <em>“I need to speak with someone.”</em><br /><br />
+      The system persists a concise evidence-rich case before it queues a human handoff.<br /><br />
+      <code>create_support_case → handoff_to_agent</code>
+    </td>
+  </tr>
+</table>
+
+## How Bookly should work
+
+| 1. Understand intent | 2. Ground the answer | 3. Show the work | 4. Guard the consequence |
+| --- | --- | --- | --- |
+| The realtime model listens, clarifies ambiguity, and chooses a typed tool path. | Catalog, policy, account, and order tools return authoritative data instead of model guesses. | The same conversation can open a book, reveal tool traces, and synchronize the cart or checkout UI. | Identity, eligibility, exact amounts, and live state are revalidated before a transaction commits. |
+
+This creates a progressive trust model: discovery and navigation feel instant; account access introduces private authentication; consequential changes introduce an exact proposal, an explicit later-turn confirmation, and a one-time commit token. Every tool run remains inspectable in the conversation with its status, latency, input, and output.
 
 ## Run locally
 
