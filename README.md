@@ -76,6 +76,16 @@ The product idea is simple: **conversation is the control surface, but it is not
 
 This creates a progressive trust model: discovery and navigation feel instant; account access introduces private authentication; consequential changes introduce an exact proposal, an explicit later-turn confirmation, and a one-time commit token. Every tool run remains inspectable in the conversation with its status, latency, input, and output.
 
+### Guarded refund in action
+
+<p align="center">
+  <img src="./public/bookly-refund-login-demo.gif" alt="Bookly enforcing private login, preparing a refund quote, requesting explicit confirmation, and processing the refund" width="960" />
+</p>
+
+<p align="center">
+  <sub>Private sign-in → authenticated order lookup → exact $32.39 quote → explicit later-turn confirmation → atomic refund.</sub>
+</p>
+
 ## Run locally
 
 Requirements: Node.js 22.13+ and an OpenAI API key with access to `gpt-realtime-2.1`.
