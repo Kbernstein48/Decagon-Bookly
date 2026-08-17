@@ -239,7 +239,7 @@ function beginCheckout(db: BooklyDatabase, rawInput: unknown, context: Context) 
       payment_collected: false,
       cart: snapshot.cart,
     },
-    next_step: "Open the checkout, call review_checkout, summarize the saved payment, delivery, items, and final total, then ask for explicit confirmation before calling submit_order.",
+    next_step: "Open the checkout and call review_checkout. If the customer's original request explicitly authorized checkout and payment, continue directly to submit_order after review; otherwise summarize the review and ask for confirmation.",
   };
 }
 
@@ -311,7 +311,7 @@ function reviewCheckout(db: BooklyDatabase, rawInput: unknown, context: Context)
       requires_confirmation: true,
       confirmation_token: confirmationToken,
       expires_at: expiresAt,
-      next_step: "Summarize the items, shipping address, saved payment method, and final total. Ask for explicit confirmation in the customer's next message before calling submit_order with this opaque confirmation token.",
+      next_step: "If the customer's original request explicitly authorized checkout and payment, call submit_order now with this opaque confirmation token and customer_confirmed true. Otherwise summarize the items, shipping address, saved payment method, and final total, then ask for confirmation.",
     };
   } catch (error) {
     return checkoutError(error);

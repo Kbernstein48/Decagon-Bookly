@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene04",
+  "fps": 60,
+  "expected_duration_frames": 1643,
+  "actual_duration_frames": 1643,
+  "events": [
+    {
+      "cue_id": "S04.C01",
+      "visual_event_id": "s04_realtime_concierge",
+      "event": "s04_realtime_concierge",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 363,
+      "actual_end_frame": 363
+    },
+    {
+      "cue_id": "S04.C01",
+      "visual_event_id": "s04_realtime_concierge",
+      "event": "s04_realtime_concierge",
+      "expected_start_frame": 363,
+      "actual_start_frame": 363,
+      "expected_end_frame": 857,
+      "actual_end_frame": 857
+    },
+    {
+      "cue_id": "S04.C02",
+      "visual_event_id": "s04_visible_journeys",
+      "event": "s04_visible_journeys",
+      "expected_start_frame": 875,
+      "actual_start_frame": 875,
+      "expected_end_frame": 1177,
+      "actual_end_frame": 1177
+    },
+    {
+      "cue_id": "S04.C02",
+      "visual_event_id": "s04_visible_journeys",
+      "event": "s04_visible_journeys",
+      "expected_start_frame": 1177,
+      "actual_start_frame": 1177,
+      "expected_end_frame": 1595,
+      "actual_end_frame": 1595
+    }
+  ]
+}

@@ -1,9 +1,13 @@
 import Link from "next/link";
-import { Menu, Search } from "lucide-react";
+import { Menu, Search, Sparkles } from "lucide-react";
 import { CartExperience } from "@/components/CartExperience";
 import { SiteAccount } from "@/components/SiteAccount";
 
-export function SiteHeader() {
+type SiteHeaderProps = {
+  demoActive?: boolean;
+};
+
+export function SiteHeader({ demoActive = false }: SiteHeaderProps) {
   return (
     <>
       <div className="announcement">
@@ -19,11 +23,19 @@ export function SiteHeader() {
           <Link href="/books">New releases</Link>
           <Link href="/books">Reader favorites</Link>
           <Link href="/#about">Our story</Link>
+          <Link
+            className={`demo-nav-link${demoActive ? " active" : ""}`}
+            href="/demo-explainer"
+            aria-current={demoActive ? "page" : undefined}
+          >
+            <Sparkles size={12} /> Demo explainer
+          </Link>
         </nav>
         <div className="header-actions">
           <Link className="header-search" href="/books#catalog-search" aria-label="Search books">
             <Search size={19} /><span>Search books</span>
           </Link>
+          <Link className="demo-mobile-link" href="/demo-explainer" aria-current={demoActive ? "page" : undefined}>Demo</Link>
           <SiteAccount />
           <CartExperience />
         </div>

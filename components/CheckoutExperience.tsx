@@ -177,7 +177,7 @@ export function CheckoutExperience({ checkoutId }: { checkoutId: string }) {
           <div className="checkout-form-panel">
             <div className="checkout-account-note">
               <span>{checkout.customer.first_name.slice(0, 1)}{checkout.customer.last_name.slice(0, 1)}</span>
-              <div><strong>Ready for {checkout.customer.first_name}</strong><p>Payment and delivery details were copied from the signed-in account. Your concierge remains available and can submit only after you confirm this review.</p></div>
+              <div><strong>Ready for {checkout.customer.first_name}</strong><p>Payment and delivery details were copied from the signed-in account. If you already asked the concierge to check out and pay, it will finish automatically after this review.</p></div>
             </div>
 
             <fieldset>

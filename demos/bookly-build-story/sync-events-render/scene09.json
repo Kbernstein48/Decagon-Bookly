@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene09",
+  "fps": 60,
+  "expected_duration_frames": 1536,
+  "actual_duration_frames": 1536,
+  "events": [
+    {
+      "cue_id": "S09.C01",
+      "visual_event_id": "s09_solution_impact",
+      "event": "s09_solution_impact",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 322,
+      "actual_end_frame": 322
+    },
+    {
+      "cue_id": "S09.C01",
+      "visual_event_id": "s09_solution_impact",
+      "event": "s09_solution_impact",
+      "expected_start_frame": 322,
+      "actual_start_frame": 322,
+      "expected_end_frame": 759,
+      "actual_end_frame": 759
+    },
+    {
+      "cue_id": "S09.C02",
+      "visual_event_id": "s09_measure_and_expand",
+      "event": "s09_measure_and_expand",
+      "expected_start_frame": 777,
+      "actual_start_frame": 777,
+      "expected_end_frame": 1076,
+      "actual_end_frame": 1076
+    },
+    {
+      "cue_id": "S09.C02",
+      "visual_event_id": "s09_measure_and_expand",
+      "event": "s09_measure_and_expand",
+      "expected_start_frame": 1076,
+      "actual_start_frame": 1076,
+      "expected_end_frame": 1488,
+      "actual_end_frame": 1488
+    }
+  ]
+}

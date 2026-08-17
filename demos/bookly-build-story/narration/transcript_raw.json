@@ -1,0 +1,4411 @@
+{
+  "source": "C:\\Users\\Kevin\\Documents\\Sound Recordings\\Recording (7).m4a",
+  "model": "large-v3-turbo",
+  "device": "cpu",
+  "language": "en",
+  "language_probability": 1,
+  "duration": 314.3893125,
+  "duration_after_vad": 285.408,
+  "segments": [
+    {
+      "id": 1,
+      "start": 2.13,
+      "end": 6.01,
+      "text": "Legacy Decision Tree Chat asks customers to think like the menu.",
+      "avg_logprob": -0.14065535022662237,
+      "no_speech_prob": 3.867751605102221e-12,
+      "words": [
+        {
+          "start": 2.13,
+          "end": 2.79,
+          "word": " Legacy",
+          "probability": 0.9468335509300232
+        },
+        {
+          "start": 2.79,
+          "end": 3.31,
+          "word": " Decision",
+          "probability": 0.8829227089881897
+        },
+        {
+          "start": 3.31,
+          "end": 3.53,
+          "word": " Tree",
+          "probability": 0.9584509134292603
+        },
+        {
+          "start": 3.53,
+          "end": 3.83,
+          "word": " Chat",
+          "probability": 0.8898253440856934
+        },
+        {
+          "start": 3.83,
+          "end": 4.37,
+          "word": " asks",
+          "probability": 0.7749007344245911
+        },
+        {
+          "start": 4.37,
+          "end": 4.73,
+          "word": " customers",
+          "probability": 0.9978548884391785
+        },
+        {
+          "start": 4.73,
+          "end": 4.91,
+          "word": " to",
+          "probability": 0.9991949200630188
+        },
+        {
+          "start": 4.91,
+          "end": 5.17,
+          "word": " think",
+          "probability": 0.9951823353767395
+        },
+        {
+          "start": 5.17,
+          "end": 5.51,
+          "word": " like",
+          "probability": 0.9778866767883301
+        },
+        {
+          "start": 5.51,
+          "end": 5.69,
+          "word": " the",
+          "probability": 0.9968948364257812
+        },
+        {
+          "start": 5.69,
+          "end": 6.01,
+          "word": " menu.",
+          "probability": 0.9950742125511169
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 6.21,
+      "end": 11.47,
+      "text": "Choose a category, follow a branch, repeat the context, and start over when the issue doesn't fit.",
+      "avg_logprob": -0.14065535022662237,
+      "no_speech_prob": 3.867751605102221e-12,
+      "words": [
+        {
+          "start": 6.21,
+          "end": 6.73,
+          "word": " Choose",
+          "probability": 0.9989365935325623
+        },
+        {
+          "start": 6.73,
+          "end": 6.87,
+          "word": " a",
+          "probability": 0.9970765113830566
+        },
+        {
+          "start": 6.87,
+          "end": 7.37,
+          "word": " category,",
+          "probability": 0.9990556836128235
+        },
+        {
+          "start": 7.63,
+          "end": 7.91,
+          "word": " follow",
+          "probability": 0.9998263716697693
+        },
+        {
+          "start": 7.91,
+          "end": 8.07,
+          "word": " a",
+          "probability": 0.998596727848053
+        },
+        {
+          "start": 8.07,
+          "end": 8.35,
+          "word": " branch,",
+          "probability": 0.9995985627174377
+        },
+        {
+          "start": 8.53,
+          "end": 8.73,
+          "word": " repeat",
+          "probability": 0.9996740818023682
+        },
+        {
+          "start": 8.73,
+          "end": 8.89,
+          "word": " the",
+          "probability": 0.9997854828834534
+        },
+        {
+          "start": 8.89,
+          "end": 9.37,
+          "word": " context,",
+          "probability": 0.9794051647186279
+        },
+        {
+          "start": 9.61,
+          "end": 10.01,
+          "word": " and",
+          "probability": 0.9995052814483643
+        },
+        {
+          "start": 10.01,
+          "end": 10.21,
+          "word": " start",
+          "probability": 0.9958537817001343
+        },
+        {
+          "start": 10.21,
+          "end": 10.41,
+          "word": " over",
+          "probability": 0.9369826316833496
+        },
+        {
+          "start": 10.41,
+          "end": 10.67,
+          "word": " when",
+          "probability": 0.9996604919433594
+        },
+        {
+          "start": 10.67,
+          "end": 10.75,
+          "word": " the",
+          "probability": 0.9997448325157166
+        },
+        {
+          "start": 10.75,
+          "end": 10.95,
+          "word": " issue",
+          "probability": 0.9997380375862122
+        },
+        {
+          "start": 10.95,
+          "end": 11.23,
+          "word": " doesn't",
+          "probability": 0.999657541513443
+        },
+        {
+          "start": 11.23,
+          "end": 11.47,
+          "word": " fit.",
+          "probability": 0.9998182654380798
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 11.83,
+      "end": 15.99,
+      "text": "The friction gets worse when support and shopping live in different surfaces.",
+      "avg_logprob": -0.14065535022662237,
+      "no_speech_prob": 3.867751605102221e-12,
+      "words": [
+        {
+          "start": 11.83,
+          "end": 12.25,
+          "word": " The",
+          "probability": 0.9815125465393066
+        },
+        {
+          "start": 12.25,
+          "end": 12.47,
+          "word": " friction",
+          "probability": 0.9997251629829407
+        },
+        {
+          "start": 12.47,
+          "end": 12.69,
+          "word": " gets",
+          "probability": 0.9996784925460815
+        },
+        {
+          "start": 12.69,
+          "end": 12.97,
+          "word": " worse",
+          "probability": 0.9994704127311707
+        },
+        {
+          "start": 12.97,
+          "end": 13.29,
+          "word": " when",
+          "probability": 0.9998526573181152
+        },
+        {
+          "start": 13.29,
+          "end": 13.77,
+          "word": " support",
+          "probability": 0.9970399737358093
+        },
+        {
+          "start": 13.77,
+          "end": 14.09,
+          "word": " and",
+          "probability": 0.999742329120636
+        },
+        {
+          "start": 14.09,
+          "end": 14.51,
+          "word": " shopping",
+          "probability": 0.9991593360900879
+        },
+        {
+          "start": 14.51,
+          "end": 15.01,
+          "word": " live",
+          "probability": 0.9995086193084717
+        },
+        {
+          "start": 15.01,
+          "end": 15.15,
+          "word": " in",
+          "probability": 0.9976517558097839
+        },
+        {
+          "start": 15.15,
+          "end": 15.39,
+          "word": " different",
+          "probability": 0.9998538494110107
+        },
+        {
+          "start": 15.39,
+          "end": 15.99,
+          "word": " surfaces.",
+          "probability": 0.9804232120513916
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 16.51,
+      "end": 21.01,
+      "text": "One interface explains, another acts, and the customer carries the journey between them.",
+      "avg_logprob": -0.14065535022662237,
+      "no_speech_prob": 3.867751605102221e-12,
+      "words": [
+        {
+          "start": 16.51,
+          "end": 17.01,
+          "word": " One",
+          "probability": 0.9997207522392273
+        },
+        {
+          "start": 17.01,
+          "end": 17.35,
+          "word": " interface",
+          "probability": 0.9998708963394165
+        },
+        {
+          "start": 17.35,
+          "end": 17.91,
+          "word": " explains,",
+          "probability": 0.9997225403785706
+        },
+        {
+          "start": 18.27,
+          "end": 18.57,
+          "word": " another",
+          "probability": 0.9998002648353577
+        },
+        {
+          "start": 18.57,
+          "end": 18.99,
+          "word": " acts,",
+          "probability": 0.9985320568084717
+        },
+        {
+          "start": 19.11,
+          "end": 19.33,
+          "word": " and",
+          "probability": 0.999975323677063
+        },
+        {
+          "start": 19.33,
+          "end": 19.43,
+          "word": " the",
+          "probability": 0.9999070167541504
+        },
+        {
+          "start": 19.43,
+          "end": 19.69,
+          "word": " customer",
+          "probability": 0.9993498921394348
+        },
+        {
+          "start": 19.69,
+          "end": 20.03,
+          "word": " carries",
+          "probability": 0.999863862991333
+        },
+        {
+          "start": 20.03,
+          "end": 20.21,
+          "word": " the",
+          "probability": 0.9998533725738525
+        },
+        {
+          "start": 20.21,
+          "end": 20.43,
+          "word": " journey",
+          "probability": 0.9997290968894958
+        },
+        {
+          "start": 20.43,
+          "end": 20.71,
+          "word": " between",
+          "probability": 0.9998806715011597
+        },
+        {
+          "start": 20.71,
+          "end": 21.01,
+          "word": " them.",
+          "probability": 0.9999278783798218
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 22.94,
+      "end": 27.18,
+      "text": "For Bookly, the opportunity is bigger than replacing a legacy chatbot.",
+      "avg_logprob": -0.14065535022662237,
+      "no_speech_prob": 3.867751605102221e-12,
+      "words": [
+        {
+          "start": 22.94,
+          "end": 23.5,
+          "word": " For",
+          "probability": 0.9993546605110168
+        },
+        {
+          "start": 23.5,
+          "end": 23.92,
+          "word": " Bookly,",
+          "probability": 0.9850300252437592
+        },
+        {
+          "start": 24.14,
+          "end": 24.48,
+          "word": " the",
+          "probability": 0.9997246861457825
+        },
+        {
+          "start": 24.48,
+          "end": 24.88,
+          "word": " opportunity",
+          "probability": 0.9998866319656372
+        },
+        {
+          "start": 24.88,
+          "end": 25.26,
+          "word": " is",
+          "probability": 0.9999434947967529
+        },
+        {
+          "start": 25.26,
+          "end": 25.44,
+          "word": " bigger",
+          "probability": 0.9991986155509949
+        },
+        {
+          "start": 25.44,
+          "end": 25.6,
+          "word": " than",
+          "probability": 0.9999531507492065
+        },
+        {
+          "start": 25.6,
+          "end": 26.02,
+          "word": " replacing",
+          "probability": 0.9995880722999573
+        },
+        {
+          "start": 26.02,
+          "end": 26.36,
+          "word": " a",
+          "probability": 0.9995821118354797
+        },
+        {
+          "start": 26.36,
+          "end": 26.66,
+          "word": " legacy",
+          "probability": 0.7003072500228882
+        },
+        {
+          "start": 26.66,
+          "end": 27.18,
+          "word": " chatbot.",
+          "probability": 0.889997810125351
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 27.18,
+      "end": 37.6,
+      "text": "A unified concierge widget can connect, discovery, purchase, account services, fulfillment, recovery, and human help in one customer journey.",
+      "avg_logprob": -0.14641428142786025,
+      "no_speech_prob": 1.5404891988771152e-12,
+      "words": [
+        {
+          "start": 27.18,
+          "end": 27.96,
+          "word": " A",
+          "probability": 0.6443789601325989
+        },
+        {
+          "start": 27.96,
+          "end": 28.34,
+          "word": " unified",
+          "probability": 0.9235513806343079
+        },
+        {
+          "start": 28.34,
+          "end": 29.14,
+          "word": " concierge",
+          "probability": 0.9864164988199869
+        },
+        {
+          "start": 29.14,
+          "end": 29.52,
+          "word": " widget",
+          "probability": 0.9632453322410583
+        },
+        {
+          "start": 29.52,
+          "end": 30.12,
+          "word": " can",
+          "probability": 0.9950238466262817
+        },
+        {
+          "start": 30.12,
+          "end": 30.52,
+          "word": " connect,",
+          "probability": 0.996661901473999
+        },
+        {
+          "start": 30.78,
+          "end": 31.52,
+          "word": " discovery,",
+          "probability": 0.9880502820014954
+        },
+        {
+          "start": 31.94,
+          "end": 32.3,
+          "word": " purchase,",
+          "probability": 0.9982750415802002
+        },
+        {
+          "start": 32.52,
+          "end": 32.7,
+          "word": " account",
+          "probability": 0.9971351623535156
+        },
+        {
+          "start": 32.7,
+          "end": 33.24,
+          "word": " services,",
+          "probability": 0.9928780198097229
+        },
+        {
+          "start": 33.8,
+          "end": 34.2,
+          "word": " fulfillment,",
+          "probability": 0.9977560639381409
+        },
+        {
+          "start": 34.6,
+          "end": 35.0,
+          "word": " recovery,",
+          "probability": 0.998932421207428
+        },
+        {
+          "start": 35.08,
+          "end": 35.76,
+          "word": " and",
+          "probability": 0.9995241165161133
+        },
+        {
+          "start": 35.76,
+          "end": 36.02,
+          "word": " human",
+          "probability": 0.9992701411247253
+        },
+        {
+          "start": 36.02,
+          "end": 36.36,
+          "word": " help",
+          "probability": 0.9611352682113647
+        },
+        {
+          "start": 36.36,
+          "end": 36.64,
+          "word": " in",
+          "probability": 0.9976608753204346
+        },
+        {
+          "start": 36.64,
+          "end": 36.84,
+          "word": " one",
+          "probability": 0.9992801547050476
+        },
+        {
+          "start": 36.84,
+          "end": 37.22,
+          "word": " customer",
+          "probability": 0.9947579503059387
+        },
+        {
+          "start": 37.22,
+          "end": 37.6,
+          "word": " journey.",
+          "probability": 0.9982966780662537
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 38.04,
+      "end": 52.47,
+      "text": "One identity and one conversation carry context across Bookly, while support, commerce, and fulfillment teams work from a shared order, inventory, policy, carrier, and case data.",
+      "avg_logprob": -0.14641428142786025,
+      "no_speech_prob": 1.5404891988771152e-12,
+      "words": [
+        {
+          "start": 38.04,
+          "end": 38.7,
+          "word": " One",
+          "probability": 0.999176561832428
+        },
+        {
+          "start": 38.7,
+          "end": 39.16,
+          "word": " identity",
+          "probability": 0.9965499639511108
+        },
+        {
+          "start": 39.16,
+          "end": 39.82,
+          "word": " and",
+          "probability": 0.9772623777389526
+        },
+        {
+          "start": 39.82,
+          "end": 40.0,
+          "word": " one",
+          "probability": 0.9993342757225037
+        },
+        {
+          "start": 40.0,
+          "end": 40.6,
+          "word": " conversation",
+          "probability": 0.9994568228721619
+        },
+        {
+          "start": 40.6,
+          "end": 41.26,
+          "word": " carry",
+          "probability": 0.9981178045272827
+        },
+        {
+          "start": 41.26,
+          "end": 41.7,
+          "word": " context",
+          "probability": 0.949719250202179
+        },
+        {
+          "start": 41.7,
+          "end": 42.04,
+          "word": " across",
+          "probability": 0.9996364116668701
+        },
+        {
+          "start": 42.04,
+          "end": 42.54,
+          "word": " Bookly,",
+          "probability": 0.964980810880661
+        },
+        {
+          "start": 42.91,
+          "end": 43.65,
+          "word": " while",
+          "probability": 0.9994373917579651
+        },
+        {
+          "start": 43.65,
+          "end": 44.07,
+          "word": " support,",
+          "probability": 0.9882041215896606
+        },
+        {
+          "start": 44.49,
+          "end": 45.05,
+          "word": " commerce,",
+          "probability": 0.9995043277740479
+        },
+        {
+          "start": 45.17,
+          "end": 45.65,
+          "word": " and",
+          "probability": 0.9999512434005737
+        },
+        {
+          "start": 45.65,
+          "end": 46.03,
+          "word": " fulfillment",
+          "probability": 0.9997122883796692
+        },
+        {
+          "start": 46.03,
+          "end": 46.53,
+          "word": " teams",
+          "probability": 0.9996300935745239
+        },
+        {
+          "start": 46.53,
+          "end": 47.43,
+          "word": " work",
+          "probability": 0.9991968274116516
+        },
+        {
+          "start": 47.43,
+          "end": 48.07,
+          "word": " from",
+          "probability": 0.9985935091972351
+        },
+        {
+          "start": 48.07,
+          "end": 48.55,
+          "word": " a",
+          "probability": 0.9922203421592712
+        },
+        {
+          "start": 48.55,
+          "end": 48.81,
+          "word": " shared",
+          "probability": 0.9997557997703552
+        },
+        {
+          "start": 48.81,
+          "end": 49.23,
+          "word": " order,",
+          "probability": 0.9996283054351807
+        },
+        {
+          "start": 49.53,
+          "end": 50.09,
+          "word": " inventory,",
+          "probability": 0.9991353154182434
+        },
+        {
+          "start": 50.51,
+          "end": 50.95,
+          "word": " policy,",
+          "probability": 0.9997958540916443
+        },
+        {
+          "start": 51.29,
+          "end": 51.65,
+          "word": " carrier,",
+          "probability": 0.9989113807678223
+        },
+        {
+          "start": 51.77,
+          "end": 51.91,
+          "word": " and",
+          "probability": 0.998914361000061
+        },
+        {
+          "start": 51.91,
+          "end": 52.17,
+          "word": " case",
+          "probability": 0.9998337030410767
+        },
+        {
+          "start": 52.17,
+          "end": 52.47,
+          "word": " data.",
+          "probability": 0.9997891783714294
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 54.44,
+      "end": 57.1,
+      "text": "This opportunity is already showing up in retail.",
+      "avg_logprob": -0.14641428142786025,
+      "no_speech_prob": 1.5404891988771152e-12,
+      "words": [
+        {
+          "start": 54.44,
+          "end": 55.22,
+          "word": " This",
+          "probability": 0.9989134073257446
+        },
+        {
+          "start": 55.22,
+          "end": 55.64,
+          "word": " opportunity",
+          "probability": 0.9996299743652344
+        },
+        {
+          "start": 55.64,
+          "end": 55.96,
+          "word": " is",
+          "probability": 0.9999256134033203
+        },
+        {
+          "start": 55.96,
+          "end": 56.16,
+          "word": " already",
+          "probability": 0.9998138546943665
+        },
+        {
+          "start": 56.16,
+          "end": 56.42,
+          "word": " showing",
+          "probability": 0.9995834231376648
+        },
+        {
+          "start": 56.42,
+          "end": 56.6,
+          "word": " up",
+          "probability": 0.9999145269393921
+        },
+        {
+          "start": 56.6,
+          "end": 56.72,
+          "word": " in",
+          "probability": 0.9997865557670593
+        },
+        {
+          "start": 56.72,
+          "end": 57.1,
+          "word": " retail.",
+          "probability": 0.9973583817481995
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 57.1,
+      "end": 68.08,
+      "text": "In live proof of concepts through peak season, 1-800-Flowers.com reached nearly 93% CSAT, double-digit points above its previous automation.",
+      "avg_logprob": -0.11500915435895528,
+      "no_speech_prob": 1.3179356694523192e-12,
+      "words": [
+        {
+          "start": 57.1,
+          "end": 58.0,
+          "word": " In",
+          "probability": 0.7203777432441711
+        },
+        {
+          "start": 58.0,
+          "end": 58.26,
+          "word": " live",
+          "probability": 0.9797939658164978
+        },
+        {
+          "start": 58.26,
+          "end": 58.54,
+          "word": " proof",
+          "probability": 0.9993963241577148
+        },
+        {
+          "start": 58.54,
+          "end": 58.78,
+          "word": " of",
+          "probability": 0.9974172115325928
+        },
+        {
+          "start": 58.78,
+          "end": 59.3,
+          "word": " concepts",
+          "probability": 0.9985407590866089
+        },
+        {
+          "start": 59.3,
+          "end": 59.64,
+          "word": " through",
+          "probability": 0.9978220462799072
+        },
+        {
+          "start": 59.64,
+          "end": 60.2,
+          "word": " peak",
+          "probability": 0.9954291582107544
+        },
+        {
+          "start": 60.2,
+          "end": 60.62,
+          "word": " season,",
+          "probability": 0.9980717897415161
+        },
+        {
+          "start": 60.84,
+          "end": 60.94,
+          "word": " 1",
+          "probability": 0.8735012412071228
+        },
+        {
+          "start": 60.94,
+          "end": 61.28,
+          "word": "-800",
+          "probability": 0.9944824576377869
+        },
+        {
+          "start": 61.28,
+          "end": 61.68,
+          "word": "-Flowers",
+          "probability": 0.9285972913106283
+        },
+        {
+          "start": 61.68,
+          "end": 62.26,
+          "word": ".com",
+          "probability": 0.9928288459777832
+        },
+        {
+          "start": 62.26,
+          "end": 62.96,
+          "word": " reached",
+          "probability": 0.9967818260192871
+        },
+        {
+          "start": 62.96,
+          "end": 63.26,
+          "word": " nearly",
+          "probability": 0.9991453886032104
+        },
+        {
+          "start": 63.26,
+          "end": 64.04,
+          "word": " 93",
+          "probability": 0.9992552399635315
+        },
+        {
+          "start": 64.04,
+          "end": 64.46,
+          "word": "%",
+          "probability": 0.9899721145629883
+        },
+        {
+          "start": 64.46,
+          "end": 65.14,
+          "word": " CSAT,",
+          "probability": 0.9837404191493988
+        },
+        {
+          "start": 65.34,
+          "end": 65.72,
+          "word": " double",
+          "probability": 0.9995373487472534
+        },
+        {
+          "start": 65.72,
+          "end": 66.04,
+          "word": "-digit",
+          "probability": 0.8818474809328715
+        },
+        {
+          "start": 66.04,
+          "end": 66.4,
+          "word": " points",
+          "probability": 0.9993773102760315
+        },
+        {
+          "start": 66.4,
+          "end": 66.68,
+          "word": " above",
+          "probability": 0.99924635887146
+        },
+        {
+          "start": 66.68,
+          "end": 67.28,
+          "word": " its",
+          "probability": 0.9977023005485535
+        },
+        {
+          "start": 67.28,
+          "end": 67.58,
+          "word": " previous",
+          "probability": 0.9997673630714417
+        },
+        {
+          "start": 67.58,
+          "end": 68.08,
+          "word": " automation.",
+          "probability": 0.9997013211250305
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 68.56,
+      "end": 80.26,
+      "text": "Hunter Douglas reports more than $1 million in revenue from conversations handled entirely by AI, with an average order value 85% higher among customers who engaged with the agent.",
+      "avg_logprob": -0.11500915435895528,
+      "no_speech_prob": 1.3179356694523192e-12,
+      "words": [
+        {
+          "start": 68.56,
+          "end": 69.08,
+          "word": " Hunter",
+          "probability": 0.9959174990653992
+        },
+        {
+          "start": 69.08,
+          "end": 69.42,
+          "word": " Douglas",
+          "probability": 0.9868590831756592
+        },
+        {
+          "start": 69.42,
+          "end": 70.18,
+          "word": " reports",
+          "probability": 0.9992032647132874
+        },
+        {
+          "start": 70.18,
+          "end": 70.46,
+          "word": " more",
+          "probability": 0.9999017715454102
+        },
+        {
+          "start": 70.46,
+          "end": 70.62,
+          "word": " than",
+          "probability": 0.9999473094940186
+        },
+        {
+          "start": 70.62,
+          "end": 70.88,
+          "word": " $1",
+          "probability": 0.9989603757858276
+        },
+        {
+          "start": 70.88,
+          "end": 71.2,
+          "word": " million",
+          "probability": 0.9923989176750183
+        },
+        {
+          "start": 71.2,
+          "end": 71.68,
+          "word": " in",
+          "probability": 0.9989342093467712
+        },
+        {
+          "start": 71.68,
+          "end": 71.96,
+          "word": " revenue",
+          "probability": 0.9998478889465332
+        },
+        {
+          "start": 71.96,
+          "end": 72.34,
+          "word": " from",
+          "probability": 0.999839186668396
+        },
+        {
+          "start": 72.34,
+          "end": 73.2,
+          "word": " conversations",
+          "probability": 0.9991877675056458
+        },
+        {
+          "start": 73.2,
+          "end": 73.56,
+          "word": " handled",
+          "probability": 0.9996558427810669
+        },
+        {
+          "start": 73.56,
+          "end": 73.98,
+          "word": " entirely",
+          "probability": 0.9998786449432373
+        },
+        {
+          "start": 73.98,
+          "end": 74.24,
+          "word": " by",
+          "probability": 0.9999741315841675
+        },
+        {
+          "start": 74.24,
+          "end": 74.6,
+          "word": " AI,",
+          "probability": 0.9975504279136658
+        },
+        {
+          "start": 74.8,
+          "end": 75.3,
+          "word": " with",
+          "probability": 0.9998990297317505
+        },
+        {
+          "start": 75.3,
+          "end": 75.44,
+          "word": " an",
+          "probability": 0.99994957447052
+        },
+        {
+          "start": 75.44,
+          "end": 75.8,
+          "word": " average",
+          "probability": 0.9998992681503296
+        },
+        {
+          "start": 75.8,
+          "end": 76.12,
+          "word": " order",
+          "probability": 0.9985253214836121
+        },
+        {
+          "start": 76.12,
+          "end": 76.7,
+          "word": " value",
+          "probability": 0.96073979139328
+        },
+        {
+          "start": 76.7,
+          "end": 77.66,
+          "word": " 85",
+          "probability": 0.9958082437515259
+        },
+        {
+          "start": 77.66,
+          "end": 78.08,
+          "word": "%",
+          "probability": 0.9998536109924316
+        },
+        {
+          "start": 78.08,
+          "end": 78.42,
+          "word": " higher",
+          "probability": 0.9998869895935059
+        },
+        {
+          "start": 78.42,
+          "end": 78.68,
+          "word": " among",
+          "probability": 0.9998124241828918
+        },
+        {
+          "start": 78.68,
+          "end": 79.12,
+          "word": " customers",
+          "probability": 0.9994256496429443
+        },
+        {
+          "start": 79.12,
+          "end": 79.32,
+          "word": " who",
+          "probability": 0.9998476505279541
+        },
+        {
+          "start": 79.32,
+          "end": 79.64,
+          "word": " engaged",
+          "probability": 0.684225857257843
+        },
+        {
+          "start": 79.64,
+          "end": 79.86,
+          "word": " with",
+          "probability": 0.9997572302818298
+        },
+        {
+          "start": 79.86,
+          "end": 79.96,
+          "word": " the",
+          "probability": 0.9997159838676453
+        },
+        {
+          "start": 79.96,
+          "end": 80.26,
+          "word": " agent.",
+          "probability": 0.9990647435188293
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 80.76,
+      "end": 86.74,
+      "text": "For Bookly, that is the value hypothesis, improve service, and help more customers complete their",
+      "avg_logprob": -0.09146607316088402,
+      "no_speech_prob": 1.3456204466660848e-12,
+      "words": [
+        {
+          "start": 80.76,
+          "end": 81.1,
+          "word": " For",
+          "probability": 0.9568852186203003
+        },
+        {
+          "start": 81.1,
+          "end": 81.42,
+          "word": " Bookly,",
+          "probability": 0.9616994559764862
+        },
+        {
+          "start": 81.7,
+          "end": 82.34,
+          "word": " that",
+          "probability": 0.9961279034614563
+        },
+        {
+          "start": 82.34,
+          "end": 82.5,
+          "word": " is",
+          "probability": 0.9967633485794067
+        },
+        {
+          "start": 82.5,
+          "end": 82.64,
+          "word": " the",
+          "probability": 0.9983955025672913
+        },
+        {
+          "start": 82.64,
+          "end": 82.94,
+          "word": " value",
+          "probability": 0.9925903081893921
+        },
+        {
+          "start": 82.94,
+          "end": 83.54,
+          "word": " hypothesis,",
+          "probability": 0.9995681643486023
+        },
+        {
+          "start": 83.92,
+          "end": 84.7,
+          "word": " improve",
+          "probability": 0.970666229724884
+        },
+        {
+          "start": 84.7,
+          "end": 85.16,
+          "word": " service,",
+          "probability": 0.9993999004364014
+        },
+        {
+          "start": 85.24,
+          "end": 85.42,
+          "word": " and",
+          "probability": 0.9999092817306519
+        },
+        {
+          "start": 85.42,
+          "end": 85.62,
+          "word": " help",
+          "probability": 0.9993768334388733
+        },
+        {
+          "start": 85.62,
+          "end": 85.8,
+          "word": " more",
+          "probability": 0.9991527795791626
+        },
+        {
+          "start": 85.8,
+          "end": 86.18,
+          "word": " customers",
+          "probability": 0.9997472167015076
+        },
+        {
+          "start": 86.18,
+          "end": 86.54,
+          "word": " complete",
+          "probability": 0.9996199607849121
+        },
+        {
+          "start": 86.54,
+          "end": 86.74,
+          "word": " their",
+          "probability": 0.9996117949485779
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 86.74,
+      "end": 93.12,
+      "text": "purchases. Now, let's show how the future estate works. Today, we turned that value proposition",
+      "avg_logprob": -0.09146607316088402,
+      "no_speech_prob": 1.3456204466660848e-12,
+      "words": [
+        {
+          "start": 86.74,
+          "end": 87.18,
+          "word": " purchases.",
+          "probability": 0.999757707118988
+        },
+        {
+          "start": 87.7,
+          "end": 88.36,
+          "word": " Now,",
+          "probability": 0.9979569911956787
+        },
+        {
+          "start": 88.56,
+          "end": 88.66,
+          "word": " let's",
+          "probability": 0.9996490180492401
+        },
+        {
+          "start": 88.66,
+          "end": 88.8,
+          "word": " show",
+          "probability": 0.9962825179100037
+        },
+        {
+          "start": 88.8,
+          "end": 89.04,
+          "word": " how",
+          "probability": 0.9976245760917664
+        },
+        {
+          "start": 89.04,
+          "end": 89.28,
+          "word": " the",
+          "probability": 0.9983246922492981
+        },
+        {
+          "start": 89.28,
+          "end": 89.58,
+          "word": " future",
+          "probability": 0.970738410949707
+        },
+        {
+          "start": 89.58,
+          "end": 89.92,
+          "word": " estate",
+          "probability": 0.44595208764076233
+        },
+        {
+          "start": 89.92,
+          "end": 90.42,
+          "word": " works.",
+          "probability": 0.9997240900993347
+        },
+        {
+          "start": 90.8,
+          "end": 91.32,
+          "word": " Today,",
+          "probability": 0.9997321963310242
+        },
+        {
+          "start": 91.54,
+          "end": 91.8,
+          "word": " we",
+          "probability": 0.9999905824661255
+        },
+        {
+          "start": 91.8,
+          "end": 92.12,
+          "word": " turned",
+          "probability": 0.9939760565757751
+        },
+        {
+          "start": 92.12,
+          "end": 92.38,
+          "word": " that",
+          "probability": 0.9998086094856262
+        },
+        {
+          "start": 92.38,
+          "end": 92.64,
+          "word": " value",
+          "probability": 0.9996225833892822
+        },
+        {
+          "start": 92.64,
+          "end": 93.12,
+          "word": " proposition",
+          "probability": 0.9999754428863525
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 93.12,
+      "end": 99.86,
+      "text": "into a working real-time concierge with text, voice, live transcripts, semantic turn detection,",
+      "avg_logprob": -0.09146607316088402,
+      "no_speech_prob": 1.3456204466660848e-12,
+      "words": [
+        {
+          "start": 93.12,
+          "end": 93.62,
+          "word": " into",
+          "probability": 0.9999606609344482
+        },
+        {
+          "start": 93.62,
+          "end": 93.8,
+          "word": " a",
+          "probability": 0.9999701976776123
+        },
+        {
+          "start": 93.8,
+          "end": 94.12,
+          "word": " working",
+          "probability": 0.9998559951782227
+        },
+        {
+          "start": 94.12,
+          "end": 94.42,
+          "word": " real",
+          "probability": 0.694707453250885
+        },
+        {
+          "start": 94.42,
+          "end": 94.64,
+          "word": "-time",
+          "probability": 0.9985818862915039
+        },
+        {
+          "start": 94.64,
+          "end": 95.3,
+          "word": " concierge",
+          "probability": 0.9998005429903666
+        },
+        {
+          "start": 95.3,
+          "end": 95.8,
+          "word": " with",
+          "probability": 0.9968156218528748
+        },
+        {
+          "start": 95.8,
+          "end": 96.14,
+          "word": " text,",
+          "probability": 0.9998418092727661
+        },
+        {
+          "start": 96.3,
+          "end": 96.58,
+          "word": " voice,",
+          "probability": 0.9999545812606812
+        },
+        {
+          "start": 97.1,
+          "end": 97.32,
+          "word": " live",
+          "probability": 0.9993209838867188
+        },
+        {
+          "start": 97.32,
+          "end": 98.42,
+          "word": " transcripts,",
+          "probability": 0.9998063445091248
+        },
+        {
+          "start": 98.82,
+          "end": 99.18,
+          "word": " semantic",
+          "probability": 0.9993569254875183
+        },
+        {
+          "start": 99.18,
+          "end": 99.42,
+          "word": " turn",
+          "probability": 0.9355241060256958
+        },
+        {
+          "start": 99.42,
+          "end": 99.86,
+          "word": " detection,",
+          "probability": 0.9984210729598999
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 100.08,
+      "end": 106.48,
+      "text": "and natural interpretation. One conversation can open an exact book, select a format,",
+      "avg_logprob": -0.09146607316088402,
+      "no_speech_prob": 1.3456204466660848e-12,
+      "words": [
+        {
+          "start": 100.08,
+          "end": 100.34,
+          "word": " and",
+          "probability": 0.9999897480010986
+        },
+        {
+          "start": 100.34,
+          "end": 100.72,
+          "word": " natural",
+          "probability": 0.9999306201934814
+        },
+        {
+          "start": 100.72,
+          "end": 101.34,
+          "word": " interpretation.",
+          "probability": 0.9998643398284912
+        },
+        {
+          "start": 101.82,
+          "end": 102.44,
+          "word": " One",
+          "probability": 0.9991962313652039
+        },
+        {
+          "start": 102.44,
+          "end": 103.0,
+          "word": " conversation",
+          "probability": 0.9991428852081299
+        },
+        {
+          "start": 103.0,
+          "end": 103.68,
+          "word": " can",
+          "probability": 0.9997280240058899
+        },
+        {
+          "start": 103.68,
+          "end": 104.24,
+          "word": " open",
+          "probability": 0.9993745684623718
+        },
+        {
+          "start": 104.24,
+          "end": 104.4,
+          "word": " an",
+          "probability": 0.9973281621932983
+        },
+        {
+          "start": 104.4,
+          "end": 104.66,
+          "word": " exact",
+          "probability": 0.9998875856399536
+        },
+        {
+          "start": 104.66,
+          "end": 105.1,
+          "word": " book,",
+          "probability": 0.9997977614402771
+        },
+        {
+          "start": 105.42,
+          "end": 105.94,
+          "word": " select",
+          "probability": 0.9997910857200623
+        },
+        {
+          "start": 105.94,
+          "end": 106.12,
+          "word": " a",
+          "probability": 0.9996640682220459
+        },
+        {
+          "start": 106.12,
+          "end": 106.48,
+          "word": " format,",
+          "probability": 0.9998831748962402
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 106.48,
+      "end": 112.42,
+      "text": "update the cart, begin checkout, investigate delivery problems, and resolve a return or",
+      "avg_logprob": -0.09776285262778402,
+      "no_speech_prob": 3.5196645944979288e-12,
+      "words": [
+        {
+          "start": 106.48,
+          "end": 107.14,
+          "word": " update",
+          "probability": 0.7210869193077087
+        },
+        {
+          "start": 107.14,
+          "end": 107.34,
+          "word": " the",
+          "probability": 0.9844831824302673
+        },
+        {
+          "start": 107.34,
+          "end": 107.6,
+          "word": " cart,",
+          "probability": 0.9709732532501221
+        },
+        {
+          "start": 107.78,
+          "end": 108.02,
+          "word": " begin",
+          "probability": 0.9842225909233093
+        },
+        {
+          "start": 108.02,
+          "end": 108.42,
+          "word": " checkout,",
+          "probability": 0.899554431438446
+        },
+        {
+          "start": 108.7,
+          "end": 109.16,
+          "word": " investigate",
+          "probability": 0.994351863861084
+        },
+        {
+          "start": 109.16,
+          "end": 109.5,
+          "word": " delivery",
+          "probability": 0.9868559241294861
+        },
+        {
+          "start": 109.5,
+          "end": 110.04,
+          "word": " problems,",
+          "probability": 0.99628746509552
+        },
+        {
+          "start": 110.3,
+          "end": 110.82,
+          "word": " and",
+          "probability": 0.9267424941062927
+        },
+        {
+          "start": 110.82,
+          "end": 111.48,
+          "word": " resolve",
+          "probability": 0.9907448887825012
+        },
+        {
+          "start": 111.48,
+          "end": 111.74,
+          "word": " a",
+          "probability": 0.9576498866081238
+        },
+        {
+          "start": 111.74,
+          "end": 112.04,
+          "word": " return",
+          "probability": 0.9989838004112244
+        },
+        {
+          "start": 112.04,
+          "end": 112.42,
+          "word": " or",
+          "probability": 0.9577562808990479
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 112.42,
+      "end": 119.47,
+      "text": "reach out to a person. Conversation is the control surface, but it is never the system",
+      "avg_logprob": -0.09776285262778402,
+      "no_speech_prob": 3.5196645944979288e-12,
+      "words": [
+        {
+          "start": 112.42,
+          "end": 112.62,
+          "word": " reach",
+          "probability": 0.9983148574829102
+        },
+        {
+          "start": 112.62,
+          "end": 112.74,
+          "word": " out",
+          "probability": 0.998529314994812
+        },
+        {
+          "start": 112.74,
+          "end": 112.86,
+          "word": " to",
+          "probability": 0.9994595646858215
+        },
+        {
+          "start": 112.86,
+          "end": 112.96,
+          "word": " a",
+          "probability": 0.9978106617927551
+        },
+        {
+          "start": 112.96,
+          "end": 113.38,
+          "word": " person.",
+          "probability": 0.9995232820510864
+        },
+        {
+          "start": 116.43,
+          "end": 117.03,
+          "word": " Conversation",
+          "probability": 0.9931530058383942
+        },
+        {
+          "start": 117.03,
+          "end": 117.25,
+          "word": " is",
+          "probability": 0.9978342652320862
+        },
+        {
+          "start": 117.25,
+          "end": 117.37,
+          "word": " the",
+          "probability": 0.9973201155662537
+        },
+        {
+          "start": 117.37,
+          "end": 117.67,
+          "word": " control",
+          "probability": 0.9963430762290955
+        },
+        {
+          "start": 117.67,
+          "end": 118.15,
+          "word": " surface,",
+          "probability": 0.9865738749504089
+        },
+        {
+          "start": 118.21,
+          "end": 118.61,
+          "word": " but",
+          "probability": 0.9996756315231323
+        },
+        {
+          "start": 118.61,
+          "end": 118.71,
+          "word": " it",
+          "probability": 0.9024136662483215
+        },
+        {
+          "start": 118.71,
+          "end": 118.81,
+          "word": " is",
+          "probability": 0.9705842137336731
+        },
+        {
+          "start": 118.81,
+          "end": 119.01,
+          "word": " never",
+          "probability": 0.999064028263092
+        },
+        {
+          "start": 119.01,
+          "end": 119.19,
+          "word": " the",
+          "probability": 0.9987497329711914
+        },
+        {
+          "start": 119.19,
+          "end": 119.47,
+          "word": " system",
+          "probability": 0.9990267753601074
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 119.47,
+      "end": 127.98,
+      "text": "of record. That separation matters because fluent answers, fluent. Conversation is the control",
+      "avg_logprob": -0.09776285262778402,
+      "no_speech_prob": 3.5196645944979288e-12,
+      "words": [
+        {
+          "start": 119.47,
+          "end": 119.61,
+          "word": " of",
+          "probability": 0.993756890296936
+        },
+        {
+          "start": 119.61,
+          "end": 119.91,
+          "word": " record.",
+          "probability": 0.9983173608779907
+        },
+        {
+          "start": 120.29,
+          "end": 120.75,
+          "word": " That",
+          "probability": 0.9876329898834229
+        },
+        {
+          "start": 120.75,
+          "end": 121.17,
+          "word": " separation",
+          "probability": 0.9975423812866211
+        },
+        {
+          "start": 121.17,
+          "end": 121.61,
+          "word": " matters",
+          "probability": 0.9977372884750366
+        },
+        {
+          "start": 121.61,
+          "end": 121.93,
+          "word": " because",
+          "probability": 0.9805505275726318
+        },
+        {
+          "start": 121.93,
+          "end": 122.55,
+          "word": " fluent",
+          "probability": 0.7384644150733948
+        },
+        {
+          "start": 122.55,
+          "end": 123.09,
+          "word": " answers,",
+          "probability": 0.8775584697723389
+        },
+        {
+          "start": 123.79,
+          "end": 124.25,
+          "word": " fluent.",
+          "probability": 0.9573008418083191
+        },
+        {
+          "start": 126.48,
+          "end": 127.08,
+          "word": " Conversation",
+          "probability": 0.9969352781772614
+        },
+        {
+          "start": 127.08,
+          "end": 127.44,
+          "word": " is",
+          "probability": 0.9994410872459412
+        },
+        {
+          "start": 127.44,
+          "end": 127.6,
+          "word": " the",
+          "probability": 0.999313473701477
+        },
+        {
+          "start": 127.6,
+          "end": 127.98,
+          "word": " control",
+          "probability": 0.9990423321723938
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 127.98,
+      "end": 133.56,
+      "text": "surface, but it's never the system of record. That separation matters because a fluent answer",
+      "avg_logprob": -0.09776285262778402,
+      "no_speech_prob": 3.5196645944979288e-12,
+      "words": [
+        {
+          "start": 127.98,
+          "end": 128.44,
+          "word": " surface,",
+          "probability": 0.9993095397949219
+        },
+        {
+          "start": 128.6,
+          "end": 128.88,
+          "word": " but",
+          "probability": 0.9996728897094727
+        },
+        {
+          "start": 128.88,
+          "end": 129.04,
+          "word": " it's",
+          "probability": 0.9981726109981537
+        },
+        {
+          "start": 129.04,
+          "end": 129.2,
+          "word": " never",
+          "probability": 0.9997976422309875
+        },
+        {
+          "start": 129.2,
+          "end": 129.38,
+          "word": " the",
+          "probability": 0.9997645020484924
+        },
+        {
+          "start": 129.38,
+          "end": 129.64,
+          "word": " system",
+          "probability": 0.9997349381446838
+        },
+        {
+          "start": 129.64,
+          "end": 129.82,
+          "word": " of",
+          "probability": 0.9224332571029663
+        },
+        {
+          "start": 129.82,
+          "end": 130.1,
+          "word": " record.",
+          "probability": 0.9990346431732178
+        },
+        {
+          "start": 130.4,
+          "end": 131.0,
+          "word": " That",
+          "probability": 0.9993706345558167
+        },
+        {
+          "start": 131.0,
+          "end": 131.38,
+          "word": " separation",
+          "probability": 0.9993032217025757
+        },
+        {
+          "start": 131.38,
+          "end": 131.8,
+          "word": " matters",
+          "probability": 0.9995412826538086
+        },
+        {
+          "start": 131.8,
+          "end": 132.42,
+          "word": " because",
+          "probability": 0.9911331534385681
+        },
+        {
+          "start": 132.42,
+          "end": 132.68,
+          "word": " a",
+          "probability": 0.9786504507064819
+        },
+        {
+          "start": 132.68,
+          "end": 133.06,
+          "word": " fluent",
+          "probability": 0.9975220561027527
+        },
+        {
+          "start": 133.06,
+          "end": 133.56,
+          "word": " answer",
+          "probability": 0.9996138215065002
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 133.56,
+      "end": 140.92,
+      "text": "is not enough. Every price, order status, eligibility decision, and action must match",
+      "avg_logprob": -0.1105758433026829,
+      "no_speech_prob": 1.816182187280857e-12,
+      "words": [
+        {
+          "start": 133.56,
+          "end": 133.82,
+          "word": " is",
+          "probability": 0.9324991106987
+        },
+        {
+          "start": 133.82,
+          "end": 134.02,
+          "word": " not",
+          "probability": 0.9984585046768188
+        },
+        {
+          "start": 134.02,
+          "end": 134.44,
+          "word": " enough.",
+          "probability": 0.9988656044006348
+        },
+        {
+          "start": 134.7,
+          "end": 135.36,
+          "word": " Every",
+          "probability": 0.9976667165756226
+        },
+        {
+          "start": 135.36,
+          "end": 136.02,
+          "word": " price,",
+          "probability": 0.9931049942970276
+        },
+        {
+          "start": 136.34,
+          "end": 136.6,
+          "word": " order",
+          "probability": 0.9988234639167786
+        },
+        {
+          "start": 136.6,
+          "end": 137.54,
+          "word": " status,",
+          "probability": 0.9900062680244446
+        },
+        {
+          "start": 138.22,
+          "end": 138.74,
+          "word": " eligibility",
+          "probability": 0.999115526676178
+        },
+        {
+          "start": 138.74,
+          "end": 139.34,
+          "word": " decision,",
+          "probability": 0.9985629916191101
+        },
+        {
+          "start": 139.56,
+          "end": 139.98,
+          "word": " and",
+          "probability": 0.9976716637611389
+        },
+        {
+          "start": 139.98,
+          "end": 140.32,
+          "word": " action",
+          "probability": 0.9996309280395508
+        },
+        {
+          "start": 140.32,
+          "end": 140.68,
+          "word": " must",
+          "probability": 0.9971784353256226
+        },
+        {
+          "start": 140.68,
+          "end": 140.92,
+          "word": " match",
+          "probability": 0.9992461204528809
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "start": 140.92,
+      "end": 147.92,
+      "text": "Bookly's actual data. The model handles dialogue and tool choice, while 29-type tools verify the",
+      "avg_logprob": -0.1105758433026829,
+      "no_speech_prob": 1.816182187280857e-12,
+      "words": [
+        {
+          "start": 140.92,
+          "end": 141.36,
+          "word": " Bookly's",
+          "probability": 0.9549158215522766
+        },
+        {
+          "start": 141.36,
+          "end": 141.7,
+          "word": " actual",
+          "probability": 0.9959706664085388
+        },
+        {
+          "start": 141.7,
+          "end": 142.06,
+          "word": " data.",
+          "probability": 0.9997408986091614
+        },
+        {
+          "start": 142.26,
+          "end": 142.94,
+          "word": " The",
+          "probability": 0.9983055591583252
+        },
+        {
+          "start": 142.94,
+          "end": 143.18,
+          "word": " model",
+          "probability": 0.9979571104049683
+        },
+        {
+          "start": 143.18,
+          "end": 143.72,
+          "word": " handles",
+          "probability": 0.9990082383155823
+        },
+        {
+          "start": 143.72,
+          "end": 144.22,
+          "word": " dialogue",
+          "probability": 0.8427234888076782
+        },
+        {
+          "start": 144.22,
+          "end": 144.7,
+          "word": " and",
+          "probability": 0.988990306854248
+        },
+        {
+          "start": 144.7,
+          "end": 144.92,
+          "word": " tool",
+          "probability": 0.9993343949317932
+        },
+        {
+          "start": 144.92,
+          "end": 145.38,
+          "word": " choice,",
+          "probability": 0.9992884397506714
+        },
+        {
+          "start": 145.54,
+          "end": 145.98,
+          "word": " while",
+          "probability": 0.999774158000946
+        },
+        {
+          "start": 145.98,
+          "end": 146.36,
+          "word": " 29",
+          "probability": 0.9919773936271667
+        },
+        {
+          "start": 146.36,
+          "end": 146.74,
+          "word": "-type",
+          "probability": 0.7886543273925781
+        },
+        {
+          "start": 146.74,
+          "end": 147.1,
+          "word": " tools",
+          "probability": 0.9996974468231201
+        },
+        {
+          "start": 147.1,
+          "end": 147.68,
+          "word": " verify",
+          "probability": 0.9980119466781616
+        },
+        {
+          "start": 147.68,
+          "end": 147.92,
+          "word": " the",
+          "probability": 0.9979302883148193
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "start": 147.92,
+      "end": 155.52,
+      "text": "identity, rag retrieval, SQL database, transactions, and Visible Trace's own truth and consequence.",
+      "avg_logprob": -0.1105758433026829,
+      "no_speech_prob": 1.816182187280857e-12,
+      "words": [
+        {
+          "start": 147.92,
+          "end": 148.46,
+          "word": " identity,",
+          "probability": 0.9969673752784729
+        },
+        {
+          "start": 148.9,
+          "end": 149.22,
+          "word": " rag",
+          "probability": 0.6997135877609253
+        },
+        {
+          "start": 149.22,
+          "end": 149.82,
+          "word": " retrieval,",
+          "probability": 0.9921420216560364
+        },
+        {
+          "start": 150.2,
+          "end": 150.6,
+          "word": " SQL",
+          "probability": 0.9922168254852295
+        },
+        {
+          "start": 150.6,
+          "end": 151.0,
+          "word": " database,",
+          "probability": 0.9812546968460083
+        },
+        {
+          "start": 151.52,
+          "end": 152.16,
+          "word": " transactions,",
+          "probability": 0.9977193474769592
+        },
+        {
+          "start": 152.92,
+          "end": 153.08,
+          "word": " and",
+          "probability": 0.9897450804710388
+        },
+        {
+          "start": 153.08,
+          "end": 153.38,
+          "word": " Visible",
+          "probability": 0.8619731068611145
+        },
+        {
+          "start": 153.38,
+          "end": 153.86,
+          "word": " Trace's",
+          "probability": 0.7464705407619476
+        },
+        {
+          "start": 153.86,
+          "end": 154.18,
+          "word": " own",
+          "probability": 0.9987468719482422
+        },
+        {
+          "start": 154.18,
+          "end": 154.6,
+          "word": " truth",
+          "probability": 0.999091386795044
+        },
+        {
+          "start": 154.6,
+          "end": 154.88,
+          "word": " and",
+          "probability": 0.9870168566703796
+        },
+        {
+          "start": 154.88,
+          "end": 155.52,
+          "word": " consequence.",
+          "probability": 0.9981957077980042
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "start": 157.06,
+      "end": 162.36,
+      "text": "Bookly gets both sides of the experience, natural for the customer, deterministic,",
+      "avg_logprob": -0.1105758433026829,
+      "no_speech_prob": 1.816182187280857e-12,
+      "words": [
+        {
+          "start": 157.06,
+          "end": 157.84,
+          "word": " Bookly",
+          "probability": 0.9988847374916077
+        },
+        {
+          "start": 157.84,
+          "end": 158.32,
+          "word": " gets",
+          "probability": 0.9975408315658569
+        },
+        {
+          "start": 158.32,
+          "end": 158.72,
+          "word": " both",
+          "probability": 0.9990172386169434
+        },
+        {
+          "start": 158.72,
+          "end": 159.1,
+          "word": " sides",
+          "probability": 0.9992565512657166
+        },
+        {
+          "start": 159.1,
+          "end": 159.26,
+          "word": " of",
+          "probability": 0.9998944997787476
+        },
+        {
+          "start": 159.26,
+          "end": 159.38,
+          "word": " the",
+          "probability": 0.9992885589599609
+        },
+        {
+          "start": 159.38,
+          "end": 159.94,
+          "word": " experience,",
+          "probability": 0.9987070560455322
+        },
+        {
+          "start": 160.18,
+          "end": 160.64,
+          "word": " natural",
+          "probability": 0.9983392953872681
+        },
+        {
+          "start": 160.64,
+          "end": 160.82,
+          "word": " for",
+          "probability": 0.9989482760429382
+        },
+        {
+          "start": 160.82,
+          "end": 160.94,
+          "word": " the",
+          "probability": 0.9997557997703552
+        },
+        {
+          "start": 160.94,
+          "end": 161.34,
+          "word": " customer,",
+          "probability": 0.9982935786247253
+        },
+        {
+          "start": 161.62,
+          "end": 162.36,
+          "word": " deterministic,",
+          "probability": 0.9991012215614319
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "start": 162.36,
+      "end": 169.49,
+      "text": "and auditable for the business. For private or consequential actions, the system slows down on",
+      "avg_logprob": -0.06835182335365701,
+      "no_speech_prob": 2.8701956176352406e-12,
+      "words": [
+        {
+          "start": 162.36,
+          "end": 162.62,
+          "word": " and",
+          "probability": 0.9201924800872803
+        },
+        {
+          "start": 162.62,
+          "end": 163.1,
+          "word": " auditable",
+          "probability": 0.9867982268333435
+        },
+        {
+          "start": 163.1,
+          "end": 163.34,
+          "word": " for",
+          "probability": 0.9970893263816833
+        },
+        {
+          "start": 163.34,
+          "end": 163.44,
+          "word": " the",
+          "probability": 0.997938334941864
+        },
+        {
+          "start": 163.44,
+          "end": 163.82,
+          "word": " business.",
+          "probability": 0.9991395473480225
+        },
+        {
+          "start": 165.97,
+          "end": 166.61,
+          "word": " For",
+          "probability": 0.9949089884757996
+        },
+        {
+          "start": 166.61,
+          "end": 166.87,
+          "word": " private",
+          "probability": 0.9940711855888367
+        },
+        {
+          "start": 166.87,
+          "end": 166.95,
+          "word": " or",
+          "probability": 0.9927534461021423
+        },
+        {
+          "start": 166.95,
+          "end": 167.57,
+          "word": " consequential",
+          "probability": 0.9996115267276764
+        },
+        {
+          "start": 167.57,
+          "end": 167.97,
+          "word": " actions,",
+          "probability": 0.9957215785980225
+        },
+        {
+          "start": 168.31,
+          "end": 168.39,
+          "word": " the",
+          "probability": 0.9987090826034546
+        },
+        {
+          "start": 168.39,
+          "end": 168.69,
+          "word": " system",
+          "probability": 0.9992882609367371
+        },
+        {
+          "start": 168.69,
+          "end": 169.11,
+          "word": " slows",
+          "probability": 0.9996423721313477
+        },
+        {
+          "start": 169.11,
+          "end": 169.31,
+          "word": " down",
+          "probability": 0.9997833371162415
+        },
+        {
+          "start": 169.31,
+          "end": 169.49,
+          "word": " on",
+          "probability": 0.9996815919876099
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "start": 169.49,
+      "end": 175.27,
+      "text": "purpose. Sign-in happens in a browser-owned form outside the model of conversation. Refund,",
+      "avg_logprob": -0.06835182335365701,
+      "no_speech_prob": 2.8701956176352406e-12,
+      "words": [
+        {
+          "start": 169.49,
+          "end": 169.89,
+          "word": " purpose.",
+          "probability": 0.997791051864624
+        },
+        {
+          "start": 170.43,
+          "end": 170.69,
+          "word": " Sign",
+          "probability": 0.986420214176178
+        },
+        {
+          "start": 170.69,
+          "end": 170.81,
+          "word": "-in",
+          "probability": 0.862350344657898
+        },
+        {
+          "start": 170.81,
+          "end": 171.21,
+          "word": " happens",
+          "probability": 0.9985357522964478
+        },
+        {
+          "start": 171.21,
+          "end": 171.39,
+          "word": " in",
+          "probability": 0.9998071789741516
+        },
+        {
+          "start": 171.39,
+          "end": 171.47,
+          "word": " a",
+          "probability": 0.9960713386535645
+        },
+        {
+          "start": 171.47,
+          "end": 171.75,
+          "word": " browser",
+          "probability": 0.9995325803756714
+        },
+        {
+          "start": 171.75,
+          "end": 172.01,
+          "word": "-owned",
+          "probability": 0.9932990372180939
+        },
+        {
+          "start": 172.01,
+          "end": 172.41,
+          "word": " form",
+          "probability": 0.9995633959770203
+        },
+        {
+          "start": 172.41,
+          "end": 172.87,
+          "word": " outside",
+          "probability": 0.8349443078041077
+        },
+        {
+          "start": 172.87,
+          "end": 173.13,
+          "word": " the",
+          "probability": 0.9966257810592651
+        },
+        {
+          "start": 173.13,
+          "end": 173.33,
+          "word": " model",
+          "probability": 0.9859532713890076
+        },
+        {
+          "start": 173.33,
+          "end": 173.53,
+          "word": " of",
+          "probability": 0.6476261019706726
+        },
+        {
+          "start": 173.53,
+          "end": 174.05,
+          "word": " conversation.",
+          "probability": 0.9986211061477661
+        },
+        {
+          "start": 174.63,
+          "end": 175.27,
+          "word": " Refund,",
+          "probability": 0.9890693128108978
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "start": 175.41,
+      "end": 179.83,
+      "text": "replacements, order changes, and shipping investigations follow one pattern. Prepare,",
+      "avg_logprob": -0.06835182335365701,
+      "no_speech_prob": 2.8701956176352406e-12,
+      "words": [
+        {
+          "start": 175.41,
+          "end": 175.89,
+          "word": " replacements,",
+          "probability": 0.9985552132129669
+        },
+        {
+          "start": 176.25,
+          "end": 176.41,
+          "word": " order",
+          "probability": 0.9997265934944153
+        },
+        {
+          "start": 176.41,
+          "end": 176.77,
+          "word": " changes,",
+          "probability": 0.9999183416366577
+        },
+        {
+          "start": 176.83,
+          "end": 177.01,
+          "word": " and",
+          "probability": 0.9999032020568848
+        },
+        {
+          "start": 177.01,
+          "end": 177.25,
+          "word": " shipping",
+          "probability": 0.9992064833641052
+        },
+        {
+          "start": 177.25,
+          "end": 177.87,
+          "word": " investigations",
+          "probability": 0.9998020529747009
+        },
+        {
+          "start": 177.87,
+          "end": 178.31,
+          "word": " follow",
+          "probability": 0.9997147917747498
+        },
+        {
+          "start": 178.31,
+          "end": 178.55,
+          "word": " one",
+          "probability": 0.9999232292175293
+        },
+        {
+          "start": 178.55,
+          "end": 178.91,
+          "word": " pattern.",
+          "probability": 0.9999616146087646
+        },
+        {
+          "start": 179.23,
+          "end": 179.83,
+          "word": " Prepare,",
+          "probability": 0.9987867474555969
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "start": 180.19,
+      "end": 187.63,
+      "text": "confirm, revalidate, and commit with a one-time token. A customer can move from discovery to",
+      "avg_logprob": -0.06835182335365701,
+      "no_speech_prob": 2.8701956176352406e-12,
+      "words": [
+        {
+          "start": 180.19,
+          "end": 180.59,
+          "word": " confirm,",
+          "probability": 0.9999070167541504
+        },
+        {
+          "start": 180.91,
+          "end": 181.51,
+          "word": " revalidate,",
+          "probability": 0.9963941723108292
+        },
+        {
+          "start": 181.59,
+          "end": 182.05,
+          "word": " and",
+          "probability": 0.9998993873596191
+        },
+        {
+          "start": 182.05,
+          "end": 182.29,
+          "word": " commit",
+          "probability": 0.9996211528778076
+        },
+        {
+          "start": 182.29,
+          "end": 182.67,
+          "word": " with",
+          "probability": 0.9237843751907349
+        },
+        {
+          "start": 182.67,
+          "end": 182.99,
+          "word": " a",
+          "probability": 0.9995079040527344
+        },
+        {
+          "start": 182.99,
+          "end": 183.17,
+          "word": " one",
+          "probability": 0.998400866985321
+        },
+        {
+          "start": 183.17,
+          "end": 183.37,
+          "word": "-time",
+          "probability": 0.9997992813587189
+        },
+        {
+          "start": 183.37,
+          "end": 183.75,
+          "word": " token.",
+          "probability": 0.9999502897262573
+        },
+        {
+          "start": 184.95,
+          "end": 185.49,
+          "word": " A",
+          "probability": 0.9996449947357178
+        },
+        {
+          "start": 185.49,
+          "end": 185.79,
+          "word": " customer",
+          "probability": 0.999748170375824
+        },
+        {
+          "start": 185.79,
+          "end": 186.05,
+          "word": " can",
+          "probability": 0.9999674558639526
+        },
+        {
+          "start": 186.05,
+          "end": 186.37,
+          "word": " move",
+          "probability": 0.9998849630355835
+        },
+        {
+          "start": 186.37,
+          "end": 186.77,
+          "word": " from",
+          "probability": 0.9998456239700317
+        },
+        {
+          "start": 186.77,
+          "end": 187.31,
+          "word": " discovery",
+          "probability": 0.9995468258857727
+        },
+        {
+          "start": 187.31,
+          "end": 187.63,
+          "word": " to",
+          "probability": 0.9983464479446411
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "start": 187.63,
+      "end": 193.07,
+      "text": "shopping, account help, delivery recovery, returns and refunds, and human escalation without",
+      "avg_logprob": -0.06835182335365701,
+      "no_speech_prob": 2.8701956176352406e-12,
+      "words": [
+        {
+          "start": 187.63,
+          "end": 188.05,
+          "word": " shopping,",
+          "probability": 0.9998371601104736
+        },
+        {
+          "start": 188.31,
+          "end": 188.51,
+          "word": " account",
+          "probability": 0.999871015548706
+        },
+        {
+          "start": 188.51,
+          "end": 188.83,
+          "word": " help,",
+          "probability": 0.9992545247077942
+        },
+        {
+          "start": 189.15,
+          "end": 189.47,
+          "word": " delivery",
+          "probability": 0.9997319579124451
+        },
+        {
+          "start": 189.47,
+          "end": 189.95,
+          "word": " recovery,",
+          "probability": 0.9914100766181946
+        },
+        {
+          "start": 190.31,
+          "end": 190.69,
+          "word": " returns",
+          "probability": 0.9994925260543823
+        },
+        {
+          "start": 190.69,
+          "end": 190.89,
+          "word": " and",
+          "probability": 0.9457008838653564
+        },
+        {
+          "start": 190.89,
+          "end": 191.49,
+          "word": " refunds,",
+          "probability": 0.9996684491634369
+        },
+        {
+          "start": 191.63,
+          "end": 191.95,
+          "word": " and",
+          "probability": 0.9958194494247437
+        },
+        {
+          "start": 191.95,
+          "end": 192.15,
+          "word": " human",
+          "probability": 0.9996869564056396
+        },
+        {
+          "start": 192.15,
+          "end": 192.75,
+          "word": " escalation",
+          "probability": 0.9995693862438202
+        },
+        {
+          "start": 192.75,
+          "end": 193.07,
+          "word": " without",
+          "probability": 0.9991127848625183
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "start": 193.07,
+      "end": 199.43,
+      "text": "restarting or losing context the interface stays continuous while server controls preserve ownership",
+      "avg_logprob": -0.06451786937458175,
+      "no_speech_prob": 2.6335311969355457e-12,
+      "words": [
+        {
+          "start": 193.07,
+          "end": 193.59,
+          "word": " restarting",
+          "probability": 0.8616550862789154
+        },
+        {
+          "start": 193.59,
+          "end": 193.71,
+          "word": " or",
+          "probability": 0.969770610332489
+        },
+        {
+          "start": 193.71,
+          "end": 193.95,
+          "word": " losing",
+          "probability": 0.9988034963607788
+        },
+        {
+          "start": 193.95,
+          "end": 194.45,
+          "word": " context",
+          "probability": 0.9843088984489441
+        },
+        {
+          "start": 194.45,
+          "end": 195.31,
+          "word": " the",
+          "probability": 0.07728617638349533
+        },
+        {
+          "start": 195.31,
+          "end": 195.69,
+          "word": " interface",
+          "probability": 0.9994490742683411
+        },
+        {
+          "start": 195.69,
+          "end": 196.11,
+          "word": " stays",
+          "probability": 0.9996709823608398
+        },
+        {
+          "start": 196.11,
+          "end": 196.89,
+          "word": " continuous",
+          "probability": 0.9986976385116577
+        },
+        {
+          "start": 196.89,
+          "end": 197.49,
+          "word": " while",
+          "probability": 0.9970601201057434
+        },
+        {
+          "start": 197.49,
+          "end": 198.11,
+          "word": " server",
+          "probability": 0.9972065091133118
+        },
+        {
+          "start": 198.11,
+          "end": 198.61,
+          "word": " controls",
+          "probability": 0.9995684027671814
+        },
+        {
+          "start": 198.61,
+          "end": 198.99,
+          "word": " preserve",
+          "probability": 0.9985812902450562
+        },
+        {
+          "start": 198.99,
+          "end": 199.43,
+          "word": " ownership",
+          "probability": 0.999394416809082
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "start": 199.95,
+      "end": 207.68,
+      "text": "policy state in a durable audit trail what we just saw removes the burden from the customers",
+      "avg_logprob": -0.06451786937458175,
+      "no_speech_prob": 2.6335311969355457e-12,
+      "words": [
+        {
+          "start": 199.95,
+          "end": 200.39,
+          "word": " policy",
+          "probability": 0.9839366674423218
+        },
+        {
+          "start": 200.39,
+          "end": 201.03,
+          "word": " state",
+          "probability": 0.9938868880271912
+        },
+        {
+          "start": 201.03,
+          "end": 201.67,
+          "word": " in",
+          "probability": 0.6884557604789734
+        },
+        {
+          "start": 201.67,
+          "end": 201.75,
+          "word": " a",
+          "probability": 0.9999217987060547
+        },
+        {
+          "start": 201.75,
+          "end": 202.01,
+          "word": " durable",
+          "probability": 0.9994682669639587
+        },
+        {
+          "start": 202.01,
+          "end": 202.35,
+          "word": " audit",
+          "probability": 0.9992455244064331
+        },
+        {
+          "start": 202.35,
+          "end": 202.65,
+          "word": " trail",
+          "probability": 0.9947882890701294
+        },
+        {
+          "start": 202.65,
+          "end": 203.61,
+          "word": " what",
+          "probability": 0.9882376790046692
+        },
+        {
+          "start": 205.46,
+          "end": 205.56,
+          "word": " we",
+          "probability": 0.9999557733535767
+        },
+        {
+          "start": 205.56,
+          "end": 205.76,
+          "word": " just",
+          "probability": 0.9998947381973267
+        },
+        {
+          "start": 205.76,
+          "end": 205.98,
+          "word": " saw",
+          "probability": 0.999434769153595
+        },
+        {
+          "start": 205.98,
+          "end": 206.5,
+          "word": " removes",
+          "probability": 0.9714705348014832
+        },
+        {
+          "start": 206.5,
+          "end": 206.66,
+          "word": " the",
+          "probability": 0.9999579191207886
+        },
+        {
+          "start": 206.66,
+          "end": 206.88,
+          "word": " burden",
+          "probability": 0.9998971223831177
+        },
+        {
+          "start": 206.88,
+          "end": 207.06,
+          "word": " from",
+          "probability": 0.9999159574508667
+        },
+        {
+          "start": 207.06,
+          "end": 207.18,
+          "word": " the",
+          "probability": 0.9996616840362549
+        },
+        {
+          "start": 207.18,
+          "end": 207.68,
+          "word": " customers",
+          "probability": 0.999233603477478
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "start": 207.68,
+      "end": 212.76,
+      "text": "they can speak naturally discover the right book take action and see bookly respond without",
+      "avg_logprob": -0.06451786937458175,
+      "no_speech_prob": 2.6335311969355457e-12,
+      "words": [
+        {
+          "start": 207.68,
+          "end": 208.18,
+          "word": " they",
+          "probability": 0.9984439015388489
+        },
+        {
+          "start": 208.18,
+          "end": 208.28,
+          "word": " can",
+          "probability": 0.9999837875366211
+        },
+        {
+          "start": 208.28,
+          "end": 208.54,
+          "word": " speak",
+          "probability": 0.999886155128479
+        },
+        {
+          "start": 208.54,
+          "end": 208.96,
+          "word": " naturally",
+          "probability": 0.9996815919876099
+        },
+        {
+          "start": 208.96,
+          "end": 209.48,
+          "word": " discover",
+          "probability": 0.9990283250808716
+        },
+        {
+          "start": 209.48,
+          "end": 209.66,
+          "word": " the",
+          "probability": 0.9999580383300781
+        },
+        {
+          "start": 209.66,
+          "end": 209.84,
+          "word": " right",
+          "probability": 0.9997709393501282
+        },
+        {
+          "start": 209.84,
+          "end": 210.12,
+          "word": " book",
+          "probability": 0.9996629953384399
+        },
+        {
+          "start": 210.12,
+          "end": 210.6,
+          "word": " take",
+          "probability": 0.9987329840660095
+        },
+        {
+          "start": 210.6,
+          "end": 211.04,
+          "word": " action",
+          "probability": 0.99985671043396
+        },
+        {
+          "start": 211.04,
+          "end": 211.62,
+          "word": " and",
+          "probability": 0.9996564388275146
+        },
+        {
+          "start": 211.62,
+          "end": 211.82,
+          "word": " see",
+          "probability": 0.999601423740387
+        },
+        {
+          "start": 211.82,
+          "end": 212.2,
+          "word": " bookly",
+          "probability": 0.9775579571723938
+        },
+        {
+          "start": 212.2,
+          "end": 212.52,
+          "word": " respond",
+          "probability": 0.9988275170326233
+        },
+        {
+          "start": 212.52,
+          "end": 212.76,
+          "word": " without",
+          "probability": 0.999946117401123
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "start": 212.76,
+      "end": 218.28,
+      "text": "leaving the conversation the impact is less effort faster resolution and more confidence",
+      "avg_logprob": -0.06451786937458175,
+      "no_speech_prob": 2.6335311969355457e-12,
+      "words": [
+        {
+          "start": 212.76,
+          "end": 213.06,
+          "word": " leaving",
+          "probability": 0.9997475743293762
+        },
+        {
+          "start": 213.06,
+          "end": 213.26,
+          "word": " the",
+          "probability": 0.9998892545700073
+        },
+        {
+          "start": 213.26,
+          "end": 213.84,
+          "word": " conversation",
+          "probability": 0.999420166015625
+        },
+        {
+          "start": 213.84,
+          "end": 214.72,
+          "word": " the",
+          "probability": 0.9992005228996277
+        },
+        {
+          "start": 214.72,
+          "end": 215.04,
+          "word": " impact",
+          "probability": 0.9998201727867126
+        },
+        {
+          "start": 215.04,
+          "end": 215.48,
+          "word": " is",
+          "probability": 0.999933123588562
+        },
+        {
+          "start": 215.48,
+          "end": 215.72,
+          "word": " less",
+          "probability": 0.9998401403427124
+        },
+        {
+          "start": 215.72,
+          "end": 216.1,
+          "word": " effort",
+          "probability": 0.9999463558197021
+        },
+        {
+          "start": 216.1,
+          "end": 216.6,
+          "word": " faster",
+          "probability": 0.9987177848815918
+        },
+        {
+          "start": 216.6,
+          "end": 217.12,
+          "word": " resolution",
+          "probability": 0.9998785257339478
+        },
+        {
+          "start": 217.12,
+          "end": 217.52,
+          "word": " and",
+          "probability": 0.998082160949707
+        },
+        {
+          "start": 217.52,
+          "end": 217.68,
+          "word": " more",
+          "probability": 0.9995689988136292
+        },
+        {
+          "start": 217.68,
+          "end": 218.28,
+          "word": " confidence",
+          "probability": 0.9996011853218079
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "start": 218.28,
+      "end": 224.34,
+      "text": "Contact stays intact, actions are visible, and consequential steps remain under control.",
+      "avg_logprob": -0.17450964414491887,
+      "no_speech_prob": 1.0376965129191285e-12,
+      "words": [
+        {
+          "start": 218.28,
+          "end": 219.06,
+          "word": " Contact",
+          "probability": 0.8921831846237183
+        },
+        {
+          "start": 219.06,
+          "end": 219.34,
+          "word": " stays",
+          "probability": 0.9998530149459839
+        },
+        {
+          "start": 219.34,
+          "end": 219.78,
+          "word": " intact,",
+          "probability": 0.9995936751365662
+        },
+        {
+          "start": 220.18,
+          "end": 220.54,
+          "word": " actions",
+          "probability": 0.9995279312133789
+        },
+        {
+          "start": 220.54,
+          "end": 220.92,
+          "word": " are",
+          "probability": 0.9999680519104004
+        },
+        {
+          "start": 220.92,
+          "end": 221.32,
+          "word": " visible,",
+          "probability": 0.9999611377716064
+        },
+        {
+          "start": 221.52,
+          "end": 221.94,
+          "word": " and",
+          "probability": 0.9999452829360962
+        },
+        {
+          "start": 221.94,
+          "end": 222.78,
+          "word": " consequential",
+          "probability": 0.9996717572212219
+        },
+        {
+          "start": 222.78,
+          "end": 223.16,
+          "word": " steps",
+          "probability": 0.9998983144760132
+        },
+        {
+          "start": 223.16,
+          "end": 223.52,
+          "word": " remain",
+          "probability": 0.99977046251297
+        },
+        {
+          "start": 223.52,
+          "end": 223.86,
+          "word": " under",
+          "probability": 0.9999176263809204
+        },
+        {
+          "start": 223.86,
+          "end": 224.34,
+          "word": " control.",
+          "probability": 0.9999102354049683
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "start": 228.14,
+      "end": 229.6,
+      "text": "That is the impact of the solution.",
+      "avg_logprob": -0.17450964414491887,
+      "no_speech_prob": 1.0376965129191285e-12,
+      "words": [
+        {
+          "start": 228.14,
+          "end": 228.5,
+          "word": " That",
+          "probability": 0.9996476173400879
+        },
+        {
+          "start": 228.5,
+          "end": 228.62,
+          "word": " is",
+          "probability": 0.9999030828475952
+        },
+        {
+          "start": 228.62,
+          "end": 228.74,
+          "word": " the",
+          "probability": 0.9999904632568359
+        },
+        {
+          "start": 228.74,
+          "end": 228.98,
+          "word": " impact",
+          "probability": 0.999887228012085
+        },
+        {
+          "start": 228.98,
+          "end": 229.1,
+          "word": " of",
+          "probability": 0.9999698400497437
+        },
+        {
+          "start": 229.1,
+          "end": 229.2,
+          "word": " the",
+          "probability": 0.9996519088745117
+        },
+        {
+          "start": 229.2,
+          "end": 229.6,
+          "word": " solution.",
+          "probability": 0.9999063014984131
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "start": 229.84,
+      "end": 235.82,
+      "text": "Support stops being a disconnected destination and becomes part of a continuous customer and fulfillment journey.",
+      "avg_logprob": -0.17450964414491887,
+      "no_speech_prob": 1.0376965129191285e-12,
+      "words": [
+        {
+          "start": 229.84,
+          "end": 230.4,
+          "word": " Support",
+          "probability": 0.9991551637649536
+        },
+        {
+          "start": 230.4,
+          "end": 230.82,
+          "word": " stops",
+          "probability": 0.9998378753662109
+        },
+        {
+          "start": 230.82,
+          "end": 231.08,
+          "word": " being",
+          "probability": 0.9998658895492554
+        },
+        {
+          "start": 231.08,
+          "end": 231.24,
+          "word": " a",
+          "probability": 0.9999223947525024
+        },
+        {
+          "start": 231.24,
+          "end": 231.72,
+          "word": " disconnected",
+          "probability": 0.9995766282081604
+        },
+        {
+          "start": 231.72,
+          "end": 232.62,
+          "word": " destination",
+          "probability": 0.9999030828475952
+        },
+        {
+          "start": 232.62,
+          "end": 232.96,
+          "word": " and",
+          "probability": 0.9978827834129333
+        },
+        {
+          "start": 232.96,
+          "end": 233.26,
+          "word": " becomes",
+          "probability": 0.9999300241470337
+        },
+        {
+          "start": 233.26,
+          "end": 233.6,
+          "word": " part",
+          "probability": 0.999947190284729
+        },
+        {
+          "start": 233.6,
+          "end": 233.8,
+          "word": " of",
+          "probability": 0.999990701675415
+        },
+        {
+          "start": 233.8,
+          "end": 233.9,
+          "word": " a",
+          "probability": 0.9998230338096619
+        },
+        {
+          "start": 233.9,
+          "end": 234.32,
+          "word": " continuous",
+          "probability": 0.9996127486228943
+        },
+        {
+          "start": 234.32,
+          "end": 234.86,
+          "word": " customer",
+          "probability": 0.9997804760932922
+        },
+        {
+          "start": 234.86,
+          "end": 235.1,
+          "word": " and",
+          "probability": 0.9984179735183716
+        },
+        {
+          "start": 235.1,
+          "end": 235.48,
+          "word": " fulfillment",
+          "probability": 0.9996535778045654
+        },
+        {
+          "start": 235.48,
+          "end": 235.82,
+          "word": " journey.",
+          "probability": 0.9999794960021973
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "start": 236.14,
+      "end": 241.28,
+      "text": "One that resolves the issue, protects the sale, and advances the relationship.",
+      "avg_logprob": -0.17450964414491887,
+      "no_speech_prob": 1.0376965129191285e-12,
+      "words": [
+        {
+          "start": 236.14,
+          "end": 236.86,
+          "word": " One",
+          "probability": 0.999772846698761
+        },
+        {
+          "start": 236.86,
+          "end": 237.16,
+          "word": " that",
+          "probability": 0.9999822378158569
+        },
+        {
+          "start": 237.16,
+          "end": 237.84,
+          "word": " resolves",
+          "probability": 0.9994947016239166
+        },
+        {
+          "start": 237.84,
+          "end": 237.96,
+          "word": " the",
+          "probability": 0.9999874830245972
+        },
+        {
+          "start": 237.96,
+          "end": 238.32,
+          "word": " issue,",
+          "probability": 0.9998940229415894
+        },
+        {
+          "start": 238.7,
+          "end": 239.0,
+          "word": " protects",
+          "probability": 0.9999535083770752
+        },
+        {
+          "start": 239.0,
+          "end": 239.18,
+          "word": " the",
+          "probability": 0.9999977350234985
+        },
+        {
+          "start": 239.18,
+          "end": 239.52,
+          "word": " sale,",
+          "probability": 0.9992552399635315
+        },
+        {
+          "start": 239.66,
+          "end": 240.16,
+          "word": " and",
+          "probability": 0.999984860420227
+        },
+        {
+          "start": 240.16,
+          "end": 240.58,
+          "word": " advances",
+          "probability": 0.9996908903121948
+        },
+        {
+          "start": 240.58,
+          "end": 240.78,
+          "word": " the",
+          "probability": 0.9999758005142212
+        },
+        {
+          "start": 240.78,
+          "end": 241.28,
+          "word": " relationship.",
+          "probability": 0.9999561309814453
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "start": 241.9,
+      "end": 246.06,
+      "text": "Vocally can start with journeys demonstrated here, connect production systems,",
+      "avg_logprob": -0.17450964414491887,
+      "no_speech_prob": 1.0376965129191285e-12,
+      "words": [
+        {
+          "start": 241.9,
+          "end": 242.38,
+          "word": " Vocally",
+          "probability": 0.527783066034317
+        },
+        {
+          "start": 242.38,
+          "end": 242.6,
+          "word": " can",
+          "probability": 0.9673706889152527
+        },
+        {
+          "start": 242.6,
+          "end": 242.8,
+          "word": " start",
+          "probability": 0.9999494552612305
+        },
+        {
+          "start": 242.8,
+          "end": 243.0,
+          "word": " with",
+          "probability": 0.9999635219573975
+        },
+        {
+          "start": 243.0,
+          "end": 243.34,
+          "word": " journeys",
+          "probability": 0.9950487017631531
+        },
+        {
+          "start": 243.34,
+          "end": 243.88,
+          "word": " demonstrated",
+          "probability": 0.9997103810310364
+        },
+        {
+          "start": 243.88,
+          "end": 244.28,
+          "word": " here,",
+          "probability": 0.9999556541442871
+        },
+        {
+          "start": 244.6,
+          "end": 245.08,
+          "word": " connect",
+          "probability": 0.9986398816108704
+        },
+        {
+          "start": 245.08,
+          "end": 245.5,
+          "word": " production",
+          "probability": 0.9998763799667358
+        },
+        {
+          "start": 245.5,
+          "end": 246.06,
+          "word": " systems,",
+          "probability": 0.9999204874038696
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "start": 246.06,
+      "end": 251.12,
+      "text": "then measure CSAT, resolution, assisted conversion, and repeat to purchase.",
+      "avg_logprob": -0.2096173792709539,
+      "no_speech_prob": 1.4653356653071548e-12,
+      "words": [
+        {
+          "start": 246.06,
+          "end": 246.54,
+          "word": " then",
+          "probability": 0.7068808078765869
+        },
+        {
+          "start": 246.54,
+          "end": 246.82,
+          "word": " measure",
+          "probability": 0.9832732677459717
+        },
+        {
+          "start": 246.82,
+          "end": 247.34,
+          "word": " CSAT,",
+          "probability": 0.9828847050666809
+        },
+        {
+          "start": 247.44,
+          "end": 247.92,
+          "word": " resolution,",
+          "probability": 0.895467221736908
+        },
+        {
+          "start": 248.22,
+          "end": 248.58,
+          "word": " assisted",
+          "probability": 0.9214038252830505
+        },
+        {
+          "start": 248.58,
+          "end": 249.06,
+          "word": " conversion,",
+          "probability": 0.9981876015663147
+        },
+        {
+          "start": 249.32,
+          "end": 249.72,
+          "word": " and",
+          "probability": 0.9989877343177795
+        },
+        {
+          "start": 249.72,
+          "end": 250.08,
+          "word": " repeat",
+          "probability": 0.9993271827697754
+        },
+        {
+          "start": 250.08,
+          "end": 250.62,
+          "word": " to",
+          "probability": 0.9767500758171082
+        },
+        {
+          "start": 250.62,
+          "end": 251.12,
+          "word": " purchase.",
+          "probability": 0.9997199177742004
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "start": 255.21,
+      "end": 257.05,
+      "text": "That is the impact of the solution.",
+      "avg_logprob": -0.2096173792709539,
+      "no_speech_prob": 1.4653356653071548e-12,
+      "words": [
+        {
+          "start": 255.21,
+          "end": 255.89,
+          "word": " That",
+          "probability": 0.9989528656005859
+        },
+        {
+          "start": 255.89,
+          "end": 256.03,
+          "word": " is",
+          "probability": 0.999627947807312
+        },
+        {
+          "start": 256.03,
+          "end": 256.15,
+          "word": " the",
+          "probability": 0.9999665021896362
+        },
+        {
+          "start": 256.15,
+          "end": 256.41,
+          "word": " impact",
+          "probability": 0.999809205532074
+        },
+        {
+          "start": 256.41,
+          "end": 256.57,
+          "word": " of",
+          "probability": 0.999788224697113
+        },
+        {
+          "start": 256.57,
+          "end": 256.65,
+          "word": " the",
+          "probability": 0.9994381070137024
+        },
+        {
+          "start": 256.65,
+          "end": 257.05,
+          "word": " solution.",
+          "probability": 0.9998064637184143
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "start": 257.49,
+      "end": 263.09,
+      "text": "Support stops being a disconnected destination and becomes part of a continuous customer and fulfillment journey.",
+      "avg_logprob": -0.2096173792709539,
+      "no_speech_prob": 1.4653356653071548e-12,
+      "words": [
+        {
+          "start": 257.49,
+          "end": 257.81,
+          "word": " Support",
+          "probability": 0.9973280429840088
+        },
+        {
+          "start": 257.81,
+          "end": 258.07,
+          "word": " stops",
+          "probability": 0.9991232752799988
+        },
+        {
+          "start": 258.07,
+          "end": 258.33,
+          "word": " being",
+          "probability": 0.9995736479759216
+        },
+        {
+          "start": 258.33,
+          "end": 258.71,
+          "word": " a",
+          "probability": 0.9998216032981873
+        },
+        {
+          "start": 258.71,
+          "end": 259.17,
+          "word": " disconnected",
+          "probability": 0.9991990923881531
+        },
+        {
+          "start": 259.17,
+          "end": 259.81,
+          "word": " destination",
+          "probability": 0.9997960925102234
+        },
+        {
+          "start": 259.81,
+          "end": 260.53,
+          "word": " and",
+          "probability": 0.948258638381958
+        },
+        {
+          "start": 260.53,
+          "end": 260.87,
+          "word": " becomes",
+          "probability": 0.9997773766517639
+        },
+        {
+          "start": 260.87,
+          "end": 261.05,
+          "word": " part",
+          "probability": 0.9998860359191895
+        },
+        {
+          "start": 261.05,
+          "end": 261.15,
+          "word": " of",
+          "probability": 0.9999867677688599
+        },
+        {
+          "start": 261.15,
+          "end": 261.25,
+          "word": " a",
+          "probability": 0.9992863535881042
+        },
+        {
+          "start": 261.25,
+          "end": 261.73,
+          "word": " continuous",
+          "probability": 0.9996358156204224
+        },
+        {
+          "start": 261.73,
+          "end": 262.21,
+          "word": " customer",
+          "probability": 0.9996410608291626
+        },
+        {
+          "start": 262.21,
+          "end": 262.43,
+          "word": " and",
+          "probability": 0.95467209815979
+        },
+        {
+          "start": 262.43,
+          "end": 262.79,
+          "word": " fulfillment",
+          "probability": 0.9965952038764954
+        },
+        {
+          "start": 262.79,
+          "end": 263.09,
+          "word": " journey.",
+          "probability": 0.9999648332595825
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "start": 263.39,
+      "end": 268.15,
+      "text": "One that resolve the issue, protect the sale, and advances the relationship.",
+      "avg_logprob": -0.2096173792709539,
+      "no_speech_prob": 1.4653356653071548e-12,
+      "words": [
+        {
+          "start": 263.39,
+          "end": 263.89,
+          "word": " One",
+          "probability": 0.9368464350700378
+        },
+        {
+          "start": 263.89,
+          "end": 264.11,
+          "word": " that",
+          "probability": 0.999906063079834
+        },
+        {
+          "start": 264.11,
+          "end": 264.77,
+          "word": " resolve",
+          "probability": 0.6730549335479736
+        },
+        {
+          "start": 264.77,
+          "end": 264.99,
+          "word": " the",
+          "probability": 0.9999572038650513
+        },
+        {
+          "start": 264.99,
+          "end": 265.33,
+          "word": " issue,",
+          "probability": 0.9998735189437866
+        },
+        {
+          "start": 265.91,
+          "end": 266.13,
+          "word": " protect",
+          "probability": 0.9990234375
+        },
+        {
+          "start": 266.13,
+          "end": 266.35,
+          "word": " the",
+          "probability": 0.9999481439590454
+        },
+        {
+          "start": 266.35,
+          "end": 266.67,
+          "word": " sale,",
+          "probability": 0.9993914365768433
+        },
+        {
+          "start": 266.85,
+          "end": 267.13,
+          "word": " and",
+          "probability": 0.999497652053833
+        },
+        {
+          "start": 267.13,
+          "end": 267.47,
+          "word": " advances",
+          "probability": 0.9975628852844238
+        },
+        {
+          "start": 267.47,
+          "end": 267.69,
+          "word": " the",
+          "probability": 0.9890637993812561
+        },
+        {
+          "start": 267.69,
+          "end": 268.15,
+          "word": " relationship.",
+          "probability": 0.9998912811279297
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "start": 268.97,
+      "end": 273.37,
+      "text": "Bookly can start with the journeys demonstrated here, connect production systems,",
+      "avg_logprob": -0.2096173792709539,
+      "no_speech_prob": 1.4653356653071548e-12,
+      "words": [
+        {
+          "start": 268.97,
+          "end": 269.27,
+          "word": " Bookly",
+          "probability": 0.6582885384559631
+        },
+        {
+          "start": 269.27,
+          "end": 269.45,
+          "word": " can",
+          "probability": 0.9993368983268738
+        },
+        {
+          "start": 269.45,
+          "end": 269.69,
+          "word": " start",
+          "probability": 0.9999560117721558
+        },
+        {
+          "start": 269.69,
+          "end": 269.87,
+          "word": " with",
+          "probability": 0.9999716281890869
+        },
+        {
+          "start": 269.87,
+          "end": 270.11,
+          "word": " the",
+          "probability": 0.9999067783355713
+        },
+        {
+          "start": 270.11,
+          "end": 270.69,
+          "word": " journeys",
+          "probability": 0.9964107871055603
+        },
+        {
+          "start": 270.69,
+          "end": 271.35,
+          "word": " demonstrated",
+          "probability": 0.9974077343940735
+        },
+        {
+          "start": 271.35,
+          "end": 271.73,
+          "word": " here,",
+          "probability": 0.9999347925186157
+        },
+        {
+          "start": 272.21,
+          "end": 272.47,
+          "word": " connect",
+          "probability": 0.9961768388748169
+        },
+        {
+          "start": 272.47,
+          "end": 272.85,
+          "word": " production",
+          "probability": 0.8730784058570862
+        },
+        {
+          "start": 272.85,
+          "end": 273.37,
+          "word": " systems,",
+          "probability": 0.999743640422821
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "start": 273.37,
+      "end": 279.63,
+      "text": "then measure CSAT, resolution time, assisted conversion, and repeat purchase proof that",
+      "avg_logprob": -0.08218865896526135,
+      "no_speech_prob": 2.2892644811062235e-12,
+      "words": [
+        {
+          "start": 273.37,
+          "end": 273.73,
+          "word": " then",
+          "probability": 0.5174201130867004
+        },
+        {
+          "start": 273.73,
+          "end": 274.01,
+          "word": " measure",
+          "probability": 0.9862274527549744
+        },
+        {
+          "start": 274.01,
+          "end": 274.53,
+          "word": " CSAT,",
+          "probability": 0.9329866468906403
+        },
+        {
+          "start": 274.63,
+          "end": 274.93,
+          "word": " resolution",
+          "probability": 0.8695173859596252
+        },
+        {
+          "start": 274.93,
+          "end": 275.31,
+          "word": " time,",
+          "probability": 0.9858800768852234
+        },
+        {
+          "start": 275.83,
+          "end": 276.09,
+          "word": " assisted",
+          "probability": 0.749765157699585
+        },
+        {
+          "start": 276.09,
+          "end": 276.55,
+          "word": " conversion,",
+          "probability": 0.9978031516075134
+        },
+        {
+          "start": 276.81,
+          "end": 277.21,
+          "word": " and",
+          "probability": 0.9976524710655212
+        },
+        {
+          "start": 277.21,
+          "end": 277.51,
+          "word": " repeat",
+          "probability": 0.9943256974220276
+        },
+        {
+          "start": 277.51,
+          "end": 278.09,
+          "word": " purchase",
+          "probability": 0.9843347668647766
+        },
+        {
+          "start": 278.09,
+          "end": 278.57,
+          "word": " proof",
+          "probability": 0.9703958034515381
+        },
+        {
+          "start": 278.57,
+          "end": 279.63,
+          "word": " that",
+          "probability": 0.9828852415084839
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "start": 279.63,
+      "end": 290.51,
+      "text": "expands the value. That is the impact of this solution. Support stops being a disconnected",
+      "avg_logprob": -0.08218865896526135,
+      "no_speech_prob": 2.2892644811062235e-12,
+      "words": [
+        {
+          "start": 279.63,
+          "end": 280.07,
+          "word": " expands",
+          "probability": 0.8175649642944336
+        },
+        {
+          "start": 280.07,
+          "end": 280.23,
+          "word": " the",
+          "probability": 0.9978752136230469
+        },
+        {
+          "start": 280.23,
+          "end": 280.55,
+          "word": " value.",
+          "probability": 0.9996254444122314
+        },
+        {
+          "start": 286.21,
+          "end": 286.83,
+          "word": " That",
+          "probability": 0.9957808256149292
+        },
+        {
+          "start": 286.83,
+          "end": 286.97,
+          "word": " is",
+          "probability": 0.9976039528846741
+        },
+        {
+          "start": 286.97,
+          "end": 287.09,
+          "word": " the",
+          "probability": 0.9996901750564575
+        },
+        {
+          "start": 287.09,
+          "end": 287.37,
+          "word": " impact",
+          "probability": 0.9991440773010254
+        },
+        {
+          "start": 287.37,
+          "end": 287.57,
+          "word": " of",
+          "probability": 0.9994857311248779
+        },
+        {
+          "start": 287.57,
+          "end": 287.81,
+          "word": " this",
+          "probability": 0.9895173907279968
+        },
+        {
+          "start": 287.81,
+          "end": 288.27,
+          "word": " solution.",
+          "probability": 0.9988395571708679
+        },
+        {
+          "start": 288.77,
+          "end": 289.43,
+          "word": " Support",
+          "probability": 0.9935218691825867
+        },
+        {
+          "start": 289.43,
+          "end": 289.75,
+          "word": " stops",
+          "probability": 0.9993337988853455
+        },
+        {
+          "start": 289.75,
+          "end": 289.95,
+          "word": " being",
+          "probability": 0.9977548718452454
+        },
+        {
+          "start": 289.95,
+          "end": 290.09,
+          "word": " a",
+          "probability": 0.9943974018096924
+        },
+        {
+          "start": 290.09,
+          "end": 290.51,
+          "word": " disconnected",
+          "probability": 0.9974985718727112
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "start": 290.51,
+      "end": 295.33,
+      "text": "destination and becomes part of a continuous customer fulfillment journey, one that can resolve",
+      "avg_logprob": -0.08218865896526135,
+      "no_speech_prob": 2.2892644811062235e-12,
+      "words": [
+        {
+          "start": 290.51,
+          "end": 291.07,
+          "word": " destination",
+          "probability": 0.9991303086280823
+        },
+        {
+          "start": 291.07,
+          "end": 291.43,
+          "word": " and",
+          "probability": 0.9646300077438354
+        },
+        {
+          "start": 291.43,
+          "end": 291.71,
+          "word": " becomes",
+          "probability": 0.997796893119812
+        },
+        {
+          "start": 291.71,
+          "end": 292.03,
+          "word": " part",
+          "probability": 0.9976382255554199
+        },
+        {
+          "start": 292.03,
+          "end": 292.23,
+          "word": " of",
+          "probability": 0.9999021291732788
+        },
+        {
+          "start": 292.23,
+          "end": 292.31,
+          "word": " a",
+          "probability": 0.30139636993408203
+        },
+        {
+          "start": 292.31,
+          "end": 292.69,
+          "word": " continuous",
+          "probability": 0.9962058067321777
+        },
+        {
+          "start": 292.69,
+          "end": 293.09,
+          "word": " customer",
+          "probability": 0.9971586465835571
+        },
+        {
+          "start": 293.09,
+          "end": 293.55,
+          "word": " fulfillment",
+          "probability": 0.9955020546913147
+        },
+        {
+          "start": 293.55,
+          "end": 293.89,
+          "word": " journey,",
+          "probability": 0.9998893737792969
+        },
+        {
+          "start": 294.23,
+          "end": 294.67,
+          "word": " one",
+          "probability": 0.999517560005188
+        },
+        {
+          "start": 294.67,
+          "end": 294.83,
+          "word": " that",
+          "probability": 0.9999755620956421
+        },
+        {
+          "start": 294.83,
+          "end": 294.99,
+          "word": " can",
+          "probability": 0.9996700286865234
+        },
+        {
+          "start": 294.99,
+          "end": 295.33,
+          "word": " resolve",
+          "probability": 0.9975169897079468
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "start": 295.33,
+      "end": 300.39,
+      "text": "the issue, protect the sale, and advance the relationship. Bookly can start with the journeys",
+      "avg_logprob": -0.08218865896526135,
+      "no_speech_prob": 2.2892644811062235e-12,
+      "words": [
+        {
+          "start": 295.33,
+          "end": 295.53,
+          "word": " the",
+          "probability": 0.9995695948600769
+        },
+        {
+          "start": 295.53,
+          "end": 295.91,
+          "word": " issue,",
+          "probability": 0.9991967082023621
+        },
+        {
+          "start": 296.19,
+          "end": 296.39,
+          "word": " protect",
+          "probability": 0.9995167255401611
+        },
+        {
+          "start": 296.39,
+          "end": 296.57,
+          "word": " the",
+          "probability": 0.9998884201049805
+        },
+        {
+          "start": 296.57,
+          "end": 296.93,
+          "word": " sale,",
+          "probability": 0.9977356195449829
+        },
+        {
+          "start": 297.05,
+          "end": 297.31,
+          "word": " and",
+          "probability": 0.9997969269752502
+        },
+        {
+          "start": 297.31,
+          "end": 297.61,
+          "word": " advance",
+          "probability": 0.9992939233779907
+        },
+        {
+          "start": 297.61,
+          "end": 297.75,
+          "word": " the",
+          "probability": 0.9942986965179443
+        },
+        {
+          "start": 297.75,
+          "end": 298.23,
+          "word": " relationship.",
+          "probability": 0.9998356103897095
+        },
+        {
+          "start": 298.87,
+          "end": 299.45,
+          "word": " Bookly",
+          "probability": 0.971854567527771
+        },
+        {
+          "start": 299.45,
+          "end": 299.65,
+          "word": " can",
+          "probability": 0.9988518953323364
+        },
+        {
+          "start": 299.65,
+          "end": 299.85,
+          "word": " start",
+          "probability": 0.9997621178627014
+        },
+        {
+          "start": 299.85,
+          "end": 299.99,
+          "word": " with",
+          "probability": 0.9991995692253113
+        },
+        {
+          "start": 299.99,
+          "end": 300.11,
+          "word": " the",
+          "probability": 0.9979606866836548
+        },
+        {
+          "start": 300.11,
+          "end": 300.39,
+          "word": " journeys",
+          "probability": 0.8879626393318176
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "start": 300.39,
+      "end": 306.19,
+      "text": "demonstrated here, connect production systems, then measure CSAT, resolution time, assisted",
+      "avg_logprob": -0.08218865896526135,
+      "no_speech_prob": 2.2892644811062235e-12,
+      "words": [
+        {
+          "start": 300.39,
+          "end": 300.89,
+          "word": " demonstrated",
+          "probability": 0.9986718893051147
+        },
+        {
+          "start": 300.89,
+          "end": 301.29,
+          "word": " here,",
+          "probability": 0.9988299012184143
+        },
+        {
+          "start": 301.73,
+          "end": 301.91,
+          "word": " connect",
+          "probability": 0.9947709441184998
+        },
+        {
+          "start": 301.91,
+          "end": 302.27,
+          "word": " production",
+          "probability": 0.9944251775741577
+        },
+        {
+          "start": 302.27,
+          "end": 303.07,
+          "word": " systems,",
+          "probability": 0.9983904361724854
+        },
+        {
+          "start": 303.35,
+          "end": 303.55,
+          "word": " then",
+          "probability": 0.9988468885421753
+        },
+        {
+          "start": 303.55,
+          "end": 303.83,
+          "word": " measure",
+          "probability": 0.9986968636512756
+        },
+        {
+          "start": 303.83,
+          "end": 304.41,
+          "word": " CSAT,",
+          "probability": 0.9722091257572174
+        },
+        {
+          "start": 304.53,
+          "end": 304.97,
+          "word": " resolution",
+          "probability": 0.9975747466087341
+        },
+        {
+          "start": 304.97,
+          "end": 305.35,
+          "word": " time,",
+          "probability": 0.999525785446167
+        },
+        {
+          "start": 305.81,
+          "end": 306.19,
+          "word": " assisted",
+          "probability": 0.9888004064559937
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "start": 306.19,
+      "end": 310.07,
+      "text": "conversion and repeat purchase to prove and expand the value.",
+      "avg_logprob": -0.21404323939766204,
+      "no_speech_prob": 4.785097014806117e-13,
+      "words": [
+        {
+          "start": 306.19,
+          "end": 306.67,
+          "word": " conversion",
+          "probability": 0.9670938849449158
+        },
+        {
+          "start": 306.67,
+          "end": 307.65,
+          "word": " and",
+          "probability": 0.7313334941864014
+        },
+        {
+          "start": 307.65,
+          "end": 308.09,
+          "word": " repeat",
+          "probability": 0.9865024089813232
+        },
+        {
+          "start": 308.09,
+          "end": 308.63,
+          "word": " purchase",
+          "probability": 0.9344315528869629
+        },
+        {
+          "start": 308.63,
+          "end": 308.85,
+          "word": " to",
+          "probability": 0.9714750051498413
+        },
+        {
+          "start": 308.85,
+          "end": 309.15,
+          "word": " prove",
+          "probability": 0.9446998834609985
+        },
+        {
+          "start": 309.15,
+          "end": 309.35,
+          "word": " and",
+          "probability": 0.9889585971832275
+        },
+        {
+          "start": 309.35,
+          "end": 309.65,
+          "word": " expand",
+          "probability": 0.9988874793052673
+        },
+        {
+          "start": 309.65,
+          "end": 309.81,
+          "word": " the",
+          "probability": 0.9978097081184387
+        },
+        {
+          "start": 309.81,
+          "end": 310.07,
+          "word": " value.",
+          "probability": 0.9995976090431213
+        }
+      ]
+    }
+  ]
+}

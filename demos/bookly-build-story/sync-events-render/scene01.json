@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene01",
+  "fps": 60,
+  "expected_duration_frames": 1233,
+  "actual_duration_frames": 1233,
+  "events": [
+    {
+      "cue_id": "S01.C01",
+      "visual_event_id": "s01_decision_tree_friction",
+      "event": "s01_decision_tree_friction",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 252,
+      "actual_end_frame": 252
+    },
+    {
+      "cue_id": "S01.C01",
+      "visual_event_id": "s01_decision_tree_friction",
+      "event": "s01_decision_tree_friction",
+      "expected_start_frame": 252,
+      "actual_start_frame": 252,
+      "expected_end_frame": 591,
+      "actual_end_frame": 591
+    },
+    {
+      "cue_id": "S01.C02",
+      "visual_event_id": "s01_fragmented_journey",
+      "event": "s01_fragmented_journey",
+      "expected_start_frame": 609,
+      "actual_start_frame": 609,
+      "expected_end_frame": 851,
+      "actual_end_frame": 851
+    },
+    {
+      "cue_id": "S01.C02",
+      "visual_event_id": "s01_fragmented_journey",
+      "event": "s01_fragmented_journey",
+      "expected_start_frame": 851,
+      "actual_start_frame": 851,
+      "expected_end_frame": 1185,
+      "actual_end_frame": 1185
+    }
+  ]
+}

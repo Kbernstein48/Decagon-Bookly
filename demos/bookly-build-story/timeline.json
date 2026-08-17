@@ -1,0 +1,395 @@
+{
+  "fps": 60,
+  "mode": "audio_locked",
+  "scenes": [
+    {
+      "id": "scene01",
+      "title": "The legacy support problem",
+      "global_start_frame": 0,
+      "duration_frames": 1233,
+      "duration_seconds": 20.55,
+      "cues": [
+        {
+          "id": "S01.C01",
+          "name": "decision_tree_friction",
+          "text": "Legacy decision-tree chat asks customers to think like the menu: choose a category, follow a branch, repeat the context, and start over when the issue does not fit.",
+          "visual_event_id": "s01_decision_tree_friction",
+          "start_frame": 0,
+          "end_frame": 603,
+          "duration_frames": 603,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 252,
+            "land": 591,
+            "settle": 603
+          },
+          "raw_audio_seconds": 9.749667
+        },
+        {
+          "id": "S01.C02",
+          "name": "fragmented_journey",
+          "text": "The friction gets worse when support and shopping live in separate surfaces\u00e2\u20ac\u201done interface explains, another acts, and the customer carries the journey between them.",
+          "visual_event_id": "s01_fragmented_journey",
+          "start_frame": 603,
+          "end_frame": 1233,
+          "duration_frames": 630,
+          "markers": {
+            "start": 603,
+            "onset": 609,
+            "focus": 851,
+            "land": 1185,
+            "settle": 1233
+          },
+          "raw_audio_seconds": 9.599583
+        }
+      ]
+    },
+    {
+      "id": "scene02",
+      "title": "The unified Bookly opportunity",
+      "global_start_frame": 1233,
+      "duration_frames": 1873,
+      "duration_seconds": 31.216667,
+      "cues": [
+        {
+          "id": "S02.C01",
+          "name": "unified_widget",
+          "text": "For Bookly, the opportunity is bigger than replacing a legacy chatbot. A unified concierge widget can connect discovery, purchase, account service, fulfillment, recovery, and human help in one customer journey.",
+          "visual_event_id": "s02_unified_widget",
+          "start_frame": 0,
+          "end_frame": 926,
+          "duration_frames": 926,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 387,
+            "land": 914,
+            "settle": 926
+          },
+          "raw_audio_seconds": 15.119417
+        },
+        {
+          "id": "S02.C02",
+          "name": "shared_context",
+          "text": "One identity and one conversation carry context across Bookly, while support, commerce, and fulfillment teams work from shared order, inventory, policy, carrier, and case data.",
+          "visual_event_id": "s02_shared_context",
+          "start_frame": 926,
+          "end_frame": 1873,
+          "duration_frames": 947,
+          "markers": {
+            "start": 926,
+            "onset": 932,
+            "focus": 1307,
+            "land": 1825,
+            "settle": 1873
+          },
+          "raw_audio_seconds": 14.879396
+        }
+      ]
+    },
+    {
+      "id": "scene03",
+      "title": "Real retail proof",
+      "global_start_frame": 3106,
+      "duration_frames": 2066,
+      "duration_seconds": 34.433333,
+      "cues": [
+        {
+          "id": "S03.C01",
+          "name": "real_csat_proof",
+          "text": "This opportunity is already showing up in retail. In a live proof of concept through peak season, 1-800-Flowers.com reached nearly ninety-three percent CSAT\u00e2\u20ac\u201ddouble-digit points above its previous automation.",
+          "visual_event_id": "s03_real_csat_proof",
+          "start_frame": 0,
+          "end_frame": 864,
+          "duration_frames": 864,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 361,
+            "land": 852,
+            "settle": 864
+          },
+          "raw_audio_seconds": 14.099417
+        },
+        {
+          "id": "S03.C02",
+          "name": "real_revenue_proof",
+          "text": "Hunter Douglas reports more than one million dollars in revenue from conversations handled entirely by AI, with average order value eighty-five percent higher among customers who engaged with the agent. For Bookly, that is the value hypothesis: improve service and help more customers complete the purchase.",
+          "visual_event_id": "s03_real_revenue_proof",
+          "start_frame": 864,
+          "end_frame": 2066,
+          "duration_frames": 1202,
+          "markers": {
+            "start": 864,
+            "onset": 870,
+            "focus": 1352,
+            "land": 2018,
+            "settle": 2066
+          },
+          "raw_audio_seconds": 19.119208
+        }
+      ]
+    },
+    {
+      "id": "scene04",
+      "title": "Show the working experience",
+      "global_start_frame": 5172,
+      "duration_frames": 1643,
+      "duration_seconds": 27.383333,
+      "cues": [
+        {
+          "id": "S04.C01",
+          "name": "realtime_concierge",
+          "text": "Now let\u00e2\u20ac\u2122s show how that future state starts to work. Today, we turned the value proposition into a working realtime concierge with text, voice, live transcripts, semantic turn detection, and natural interruption.",
+          "visual_event_id": "s04_realtime_concierge",
+          "start_frame": 0,
+          "end_frame": 869,
+          "duration_frames": 869,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 363,
+            "land": 857,
+            "settle": 869
+          },
+          "raw_audio_seconds": 14.179417
+        },
+        {
+          "id": "S04.C02",
+          "name": "visible_journeys",
+          "text": "One conversation can open an exact book, select a format, update the cart, begin checkout, investigate delivery, resolve a return, or reach a person.",
+          "visual_event_id": "s04_visible_journeys",
+          "start_frame": 869,
+          "end_frame": 1643,
+          "duration_frames": 774,
+          "markers": {
+            "start": 869,
+            "onset": 875,
+            "focus": 1177,
+            "land": 1595,
+            "settle": 1643
+          },
+          "raw_audio_seconds": 11.9995
+        }
+      ]
+    },
+    {
+      "id": "scene05",
+      "title": "Conversation with control",
+      "global_start_frame": 6815,
+      "duration_frames": 2344,
+      "duration_seconds": 39.066667,
+      "cues": [
+        {
+          "id": "S05.C01",
+          "name": "control_surface",
+          "text": "Conversation is the control surface, but it is never the system of record. That separation matters because a fluent answer is not enough: every price, order status, eligibility decision, and action must match Bookly's actual data.",
+          "visual_event_id": "s05_control_surface_split",
+          "start_frame": 0,
+          "end_frame": 976,
+          "duration_frames": 976,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 408,
+            "land": 964,
+            "settle": 976
+          },
+          "raw_audio_seconds": 15.959333
+        },
+        {
+          "id": "S05.C02",
+          "name": "deterministic_control",
+          "text": "The model handles dialogue and tool choice, while twenty-nine typed tools, verified identity, LanceDB retrieval, SQLite state, transactions, and visible traces own truth and consequences. Bookly gets both sides of the experience: natural for the customer, deterministic and auditable for the business.",
+          "visual_event_id": "s05_deterministic_control",
+          "start_frame": 976,
+          "end_frame": 2344,
+          "duration_frames": 1368,
+          "markers": {
+            "start": 976,
+            "onset": 982,
+            "focus": 1534,
+            "land": 2296,
+            "settle": 2344
+          },
+          "raw_audio_seconds": 21.889
+        }
+      ]
+    },
+    {
+      "id": "scene06",
+      "title": "Trust before consequence",
+      "global_start_frame": 9159,
+      "duration_frames": 1170,
+      "duration_seconds": 19.5,
+      "cues": [
+        {
+          "id": "S06.C01",
+          "name": "private_identity",
+          "text": "For private or consequential actions, the system slows down on purpose. Sign-in happens in a browser-owned form, outside the model conversation.",
+          "visual_event_id": "s06_private_identity",
+          "start_frame": 0,
+          "end_frame": 534,
+          "duration_frames": 534,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 223,
+            "land": 522,
+            "settle": 534
+          },
+          "raw_audio_seconds": 8.599646
+        },
+        {
+          "id": "S06.C02",
+          "name": "guarded_commit",
+          "text": "Refunds, replacements, order changes, and shipping investigations follow one pattern: prepare, confirm, revalidate, and commit with a one-time token.",
+          "visual_event_id": "s06_guarded_commit_rail",
+          "start_frame": 534,
+          "end_frame": 1170,
+          "duration_frames": 636,
+          "markers": {
+            "start": 534,
+            "onset": 540,
+            "focus": 784,
+            "land": 1122,
+            "settle": 1170
+          },
+          "raw_audio_seconds": 9.699583
+        }
+      ]
+    },
+    {
+      "id": "scene07",
+      "title": "One conversation, six journeys",
+      "global_start_frame": 10329,
+      "duration_frames": 1149,
+      "duration_seconds": 19.15,
+      "cues": [
+        {
+          "id": "S07.C01",
+          "name": "journey_map",
+          "text": "A customer can move from discovery to shopping, account help, delivery recovery, returns and refunds, and human escalation without restarting or losing context.",
+          "visual_event_id": "s07_six_journeys",
+          "start_frame": 0,
+          "end_frame": 618,
+          "duration_frames": 618,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 258,
+            "land": 606,
+            "settle": 618
+          },
+          "raw_audio_seconds": 9.999583
+        },
+        {
+          "id": "S07.C02",
+          "name": "continuity",
+          "text": "The interface stays continuous while server controls preserve ownership, policy, state, and a durable audit trail.",
+          "visual_event_id": "s07_continuity_line",
+          "start_frame": 618,
+          "end_frame": 1149,
+          "duration_frames": 531,
+          "markers": {
+            "start": 618,
+            "onset": 624,
+            "focus": 824,
+            "land": 1101,
+            "settle": 1149
+          },
+          "raw_audio_seconds": 7.949667
+        }
+      ]
+    },
+    {
+      "id": "scene08",
+      "title": "What the customer experiences",
+      "global_start_frame": 11478,
+      "duration_frames": 1386,
+      "duration_seconds": 23.1,
+      "cues": [
+        {
+          "id": "S08.C01",
+          "name": "customer_burden_removed",
+          "text": "What we just saw removes the burden from the customer. They can speak naturally, discover the right book, take action, and see Bookly respond without leaving the conversation.",
+          "visual_event_id": "s08_customer_burden_removed",
+          "start_frame": 0,
+          "end_frame": 699,
+          "duration_frames": 699,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 292,
+            "land": 687,
+            "settle": 699
+          },
+          "raw_audio_seconds": 11.349521
+        },
+        {
+          "id": "S08.C02",
+          "name": "customer_impact",
+          "text": "The impact is less effort, faster resolution, and more confidence: context stays intact, actions are visible, and consequential steps remain under customer control.",
+          "visual_event_id": "s08_customer_impact",
+          "start_frame": 699,
+          "end_frame": 1386,
+          "duration_frames": 687,
+          "markers": {
+            "start": 699,
+            "onset": 705,
+            "focus": 971,
+            "land": 1338,
+            "settle": 1386
+          },
+          "raw_audio_seconds": 10.549563
+        }
+      ]
+    },
+    {
+      "id": "scene09",
+      "title": "The impact for Bookly",
+      "global_start_frame": 12864,
+      "duration_frames": 1536,
+      "duration_seconds": 25.6,
+      "cues": [
+        {
+          "id": "S09.C01",
+          "name": "solution_impact",
+          "text": "That is the impact of the solution: support stops being a disconnected destination and becomes part of a continuous customer and fulfillment journey\u00e2\u20ac\u201done that can resolve the issue, protect the sale, and advance the relationship.",
+          "visual_event_id": "s09_solution_impact",
+          "start_frame": 0,
+          "end_frame": 771,
+          "duration_frames": 771,
+          "markers": {
+            "start": 0,
+            "onset": 6,
+            "focus": 322,
+            "land": 759,
+            "settle": 771
+          },
+          "raw_audio_seconds": 12.549458
+        },
+        {
+          "id": "S09.C02",
+          "name": "measure_and_expand",
+          "text": "Bookly can start with the journeys demonstrated here, connect production systems, then measure CSAT, resolution time, assisted conversion, and repeat purchase to prove and expand the value.",
+          "visual_event_id": "s09_measure_and_expand",
+          "start_frame": 771,
+          "end_frame": 1536,
+          "duration_frames": 765,
+          "markers": {
+            "start": 771,
+            "onset": 777,
+            "focus": 1076,
+            "land": 1488,
+            "settle": 1536
+          },
+          "raw_audio_seconds": 11.849521
+        }
+      ]
+    }
+  ],
+  "duration_frames": 14400,
+  "duration_seconds": 240.0
+}
