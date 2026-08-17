@@ -170,6 +170,45 @@ flowchart LR
   Router -->|"function result"| Realtime
 ```
 
+### Guarded transactional action sequence
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Customer
+  participant UI as Bookly storefront + widget
+  participant Realtime as GPT Realtime
+  participant Router as Server tool router
+  participant Auth as Session authentication
+  participant Data as SQLite + LanceDB
+
+  Customer->>UI: Request an account or transactional action
+  UI->>Realtime: Send text or voice turn
+  Realtime->>Router: Call a typed tool
+  Router->>Auth: Resolve the signed browser session
+  alt Customer is not signed in
+    Auth-->>UI: Authentication required
+    UI-->>Customer: Open private inline sign-in
+    Customer->>UI: Submit credentials outside model context
+    UI->>Auth: Establish signed HttpOnly session
+    Auth-->>Router: Return verified customer context
+  else Customer is signed in
+    Auth-->>Router: Return verified customer context
+  end
+  Router->>Data: Read policy, ownership, and live state
+  Data-->>Router: Return eligibility, exact amounts, and status
+  Router-->>Realtime: Return exact proposal + one-time token
+  Realtime-->>Customer: Summarize the action and request confirmation
+  Customer->>UI: Explicitly confirm
+  UI->>Realtime: Send confirmed turn
+  Realtime->>Router: Commit with the one-time token
+  Router->>Data: Revalidate and transact atomically
+  Data-->>Router: Return receipt + updated state
+  Router-->>UI: Synchronize the storefront
+  Router-->>Realtime: Return structured result
+  Realtime-->>Customer: Confirm the outcome
+```
+
 - The permanent OpenAI key stays on the server. The browser posts its SDP offer to `/api/realtime`; the server creates the OpenAI WebRTC call and returns only the SDP answer.
 - Account tools never trust credentials supplied by the model. The agent invokes `authenticate_customer`, a reusable inline form collects email and password outside the model conversation, and the server binds the matching customer ID to the current browser session in a signed HttpOnly cookie. The site header and chat share that state, while every protected tool resolves ownership from the server-verified session.
 - The Realtime conversation holds immediate dialogue context. Messages and tool traces are also stored by browser session and restored after refresh.
