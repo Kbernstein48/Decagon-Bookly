@@ -1,0 +1,218 @@
+[
+  {
+    "scene": 1,
+    "sample": 1,
+    "path": "review-final\\scene01-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene01Legacy.mp4",
+    "timestamp_seconds": 6.85,
+    "scene_duration_seconds": 20.55
+  },
+  {
+    "scene": 1,
+    "sample": 2,
+    "path": "review-final\\scene01-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene01Legacy.mp4",
+    "timestamp_seconds": 13.7,
+    "scene_duration_seconds": 20.55
+  },
+  {
+    "scene": 1,
+    "sample": 3,
+    "path": "review-final\\scene01-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene01Legacy.mp4",
+    "timestamp_seconds": 19.95,
+    "scene_duration_seconds": 20.55
+  },
+  {
+    "scene": 2,
+    "sample": 1,
+    "path": "review-final\\scene02-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene02Unified.mp4",
+    "timestamp_seconds": 10.406,
+    "scene_duration_seconds": 31.217
+  },
+  {
+    "scene": 2,
+    "sample": 2,
+    "path": "review-final\\scene02-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene02Unified.mp4",
+    "timestamp_seconds": 20.811,
+    "scene_duration_seconds": 31.217
+  },
+  {
+    "scene": 2,
+    "sample": 3,
+    "path": "review-final\\scene02-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene02Unified.mp4",
+    "timestamp_seconds": 30.617,
+    "scene_duration_seconds": 31.217
+  },
+  {
+    "scene": 3,
+    "sample": 1,
+    "path": "review-final\\scene03-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene03Proof.mp4",
+    "timestamp_seconds": 11.478,
+    "scene_duration_seconds": 34.433
+  },
+  {
+    "scene": 3,
+    "sample": 2,
+    "path": "review-final\\scene03-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene03Proof.mp4",
+    "timestamp_seconds": 22.956,
+    "scene_duration_seconds": 34.433
+  },
+  {
+    "scene": 3,
+    "sample": 3,
+    "path": "review-final\\scene03-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene03Proof.mp4",
+    "timestamp_seconds": 33.833,
+    "scene_duration_seconds": 34.433
+  },
+  {
+    "scene": 4,
+    "sample": 1,
+    "path": "review-final\\scene04-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene04Experience.mp4",
+    "timestamp_seconds": 9.128,
+    "scene_duration_seconds": 27.383
+  },
+  {
+    "scene": 4,
+    "sample": 2,
+    "path": "review-final\\scene04-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene04Experience.mp4",
+    "timestamp_seconds": 18.256,
+    "scene_duration_seconds": 27.383
+  },
+  {
+    "scene": 4,
+    "sample": 3,
+    "path": "review-final\\scene04-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene04Experience.mp4",
+    "timestamp_seconds": 26.783,
+    "scene_duration_seconds": 27.383
+  },
+  {
+    "scene": 5,
+    "sample": 1,
+    "path": "review-final\\scene05-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene05Control.mp4",
+    "timestamp_seconds": 13.022,
+    "scene_duration_seconds": 39.067
+  },
+  {
+    "scene": 5,
+    "sample": 2,
+    "path": "review-final\\scene05-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene05Control.mp4",
+    "timestamp_seconds": 26.044,
+    "scene_duration_seconds": 39.067
+  },
+  {
+    "scene": 5,
+    "sample": 3,
+    "path": "review-final\\scene05-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene05Control.mp4",
+    "timestamp_seconds": 38.467,
+    "scene_duration_seconds": 39.067
+  },
+  {
+    "scene": 6,
+    "sample": 1,
+    "path": "review-final\\scene06-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene06Trust.mp4",
+    "timestamp_seconds": 6.5,
+    "scene_duration_seconds": 19.5
+  },
+  {
+    "scene": 6,
+    "sample": 2,
+    "path": "review-final\\scene06-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene06Trust.mp4",
+    "timestamp_seconds": 13.0,
+    "scene_duration_seconds": 19.5
+  },
+  {
+    "scene": 6,
+    "sample": 3,
+    "path": "review-final\\scene06-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene06Trust.mp4",
+    "timestamp_seconds": 18.9,
+    "scene_duration_seconds": 19.5
+  },
+  {
+    "scene": 7,
+    "sample": 1,
+    "path": "review-final\\scene07-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene07Journeys.mp4",
+    "timestamp_seconds": 6.383,
+    "scene_duration_seconds": 19.15
+  },
+  {
+    "scene": 7,
+    "sample": 2,
+    "path": "review-final\\scene07-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene07Journeys.mp4",
+    "timestamp_seconds": 12.767,
+    "scene_duration_seconds": 19.15
+  },
+  {
+    "scene": 7,
+    "sample": 3,
+    "path": "review-final\\scene07-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene07Journeys.mp4",
+    "timestamp_seconds": 18.55,
+    "scene_duration_seconds": 19.15
+  },
+  {
+    "scene": 8,
+    "sample": 1,
+    "path": "review-final\\scene08-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene08Impact.mp4",
+    "timestamp_seconds": 7.7,
+    "scene_duration_seconds": 23.1
+  },
+  {
+    "scene": 8,
+    "sample": 2,
+    "path": "review-final\\scene08-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene08Impact.mp4",
+    "timestamp_seconds": 15.4,
+    "scene_duration_seconds": 23.1
+  },
+  {
+    "scene": 8,
+    "sample": 3,
+    "path": "review-final\\scene08-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene08Impact.mp4",
+    "timestamp_seconds": 22.5,
+    "scene_duration_seconds": 23.1
+  },
+  {
+    "scene": 9,
+    "sample": 1,
+    "path": "review-final\\scene09-key01.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene09BooklyImpact.mp4",
+    "timestamp_seconds": 8.533,
+    "scene_duration_seconds": 25.6
+  },
+  {
+    "scene": 9,
+    "sample": 2,
+    "path": "review-final\\scene09-key02.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene09BooklyImpact.mp4",
+    "timestamp_seconds": 17.067,
+    "scene_duration_seconds": 25.6
+  },
+  {
+    "scene": 9,
+    "sample": 3,
+    "path": "review-final\\scene09-final.png",
+    "source_video": "media\\videos\\script\\1080p60\\Scene09BooklyImpact.mp4",
+    "timestamp_seconds": 25.0,
+    "scene_duration_seconds": 25.6
+  }
+]

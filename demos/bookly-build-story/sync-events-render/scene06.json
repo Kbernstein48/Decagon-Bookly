@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene06",
+  "fps": 60,
+  "expected_duration_frames": 1170,
+  "actual_duration_frames": 1170,
+  "events": [
+    {
+      "cue_id": "S06.C01",
+      "visual_event_id": "s06_private_identity",
+      "event": "s06_private_identity",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 223,
+      "actual_end_frame": 223
+    },
+    {
+      "cue_id": "S06.C01",
+      "visual_event_id": "s06_private_identity",
+      "event": "s06_private_identity",
+      "expected_start_frame": 223,
+      "actual_start_frame": 223,
+      "expected_end_frame": 522,
+      "actual_end_frame": 522
+    },
+    {
+      "cue_id": "S06.C02",
+      "visual_event_id": "s06_guarded_commit_rail",
+      "event": "s06_guarded_commit_rail",
+      "expected_start_frame": 540,
+      "actual_start_frame": 540,
+      "expected_end_frame": 784,
+      "actual_end_frame": 784
+    },
+    {
+      "cue_id": "S06.C02",
+      "visual_event_id": "s06_guarded_commit_rail",
+      "event": "s06_guarded_commit_rail",
+      "expected_start_frame": 784,
+      "actual_start_frame": 784,
+      "expected_end_frame": 1122,
+      "actual_end_frame": 1123
+    }
+  ]
+}

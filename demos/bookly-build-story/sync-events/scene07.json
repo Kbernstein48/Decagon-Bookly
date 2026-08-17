@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene07",
+  "fps": 60,
+  "expected_duration_frames": 1149,
+  "actual_duration_frames": 1149,
+  "events": [
+    {
+      "cue_id": "S07.C01",
+      "visual_event_id": "s07_six_journeys",
+      "event": "s07_six_journeys",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 258,
+      "actual_end_frame": 258
+    },
+    {
+      "cue_id": "S07.C01",
+      "visual_event_id": "s07_six_journeys",
+      "event": "s07_six_journeys",
+      "expected_start_frame": 258,
+      "actual_start_frame": 258,
+      "expected_end_frame": 606,
+      "actual_end_frame": 606
+    },
+    {
+      "cue_id": "S07.C02",
+      "visual_event_id": "s07_continuity_line",
+      "event": "s07_continuity_line",
+      "expected_start_frame": 624,
+      "actual_start_frame": 624,
+      "expected_end_frame": 824,
+      "actual_end_frame": 824
+    },
+    {
+      "cue_id": "S07.C02",
+      "visual_event_id": "s07_continuity_line",
+      "event": "s07_continuity_line",
+      "expected_start_frame": 824,
+      "actual_start_frame": 824,
+      "expected_end_frame": 1101,
+      "actual_end_frame": 1101
+    }
+  ]
+}

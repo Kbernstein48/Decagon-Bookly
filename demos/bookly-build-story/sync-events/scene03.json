@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene03",
+  "fps": 60,
+  "expected_duration_frames": 2066,
+  "actual_duration_frames": 2066,
+  "events": [
+    {
+      "cue_id": "S03.C01",
+      "visual_event_id": "s03_real_csat_proof",
+      "event": "s03_real_csat_proof",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 361,
+      "actual_end_frame": 361
+    },
+    {
+      "cue_id": "S03.C01",
+      "visual_event_id": "s03_real_csat_proof",
+      "event": "s03_real_csat_proof",
+      "expected_start_frame": 361,
+      "actual_start_frame": 361,
+      "expected_end_frame": 852,
+      "actual_end_frame": 852
+    },
+    {
+      "cue_id": "S03.C02",
+      "visual_event_id": "s03_real_revenue_proof",
+      "event": "s03_real_revenue_proof",
+      "expected_start_frame": 870,
+      "actual_start_frame": 870,
+      "expected_end_frame": 1352,
+      "actual_end_frame": 1352
+    },
+    {
+      "cue_id": "S03.C02",
+      "visual_event_id": "s03_real_revenue_proof",
+      "event": "s03_real_revenue_proof",
+      "expected_start_frame": 1352,
+      "actual_start_frame": 1352,
+      "expected_end_frame": 2018,
+      "actual_end_frame": 2018
+    }
+  ]
+}

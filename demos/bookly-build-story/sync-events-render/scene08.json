@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene08",
+  "fps": 60,
+  "expected_duration_frames": 1386,
+  "actual_duration_frames": 1386,
+  "events": [
+    {
+      "cue_id": "S08.C01",
+      "visual_event_id": "s08_customer_burden_removed",
+      "event": "s08_customer_burden_removed",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 292,
+      "actual_end_frame": 292
+    },
+    {
+      "cue_id": "S08.C01",
+      "visual_event_id": "s08_customer_burden_removed",
+      "event": "s08_customer_burden_removed",
+      "expected_start_frame": 292,
+      "actual_start_frame": 292,
+      "expected_end_frame": 687,
+      "actual_end_frame": 687
+    },
+    {
+      "cue_id": "S08.C02",
+      "visual_event_id": "s08_customer_impact",
+      "event": "s08_customer_impact",
+      "expected_start_frame": 705,
+      "actual_start_frame": 705,
+      "expected_end_frame": 971,
+      "actual_end_frame": 971
+    },
+    {
+      "cue_id": "S08.C02",
+      "visual_event_id": "s08_customer_impact",
+      "event": "s08_customer_impact",
+      "expected_start_frame": 971,
+      "actual_start_frame": 971,
+      "expected_end_frame": 1338,
+      "actual_end_frame": 1338
+    }
+  ]
+}

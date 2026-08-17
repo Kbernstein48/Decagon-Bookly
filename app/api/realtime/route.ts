@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { realtimeSessionConfig } from "@/lib/agent";
+import { customerSessionFromRequest } from "@/lib/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -11,10 +12,11 @@ export async function POST(request: Request) {
   const sdp = await request.text();
   if (!sdp.trim()) return Response.json({ error: "Missing SDP offer." }, { status: 400 });
   const sessionId = request.headers.get("x-bookly-session") || "anonymous-demo-session";
+  const userLoggedIn = Boolean(customerSessionFromRequest(request, sessionId));
   const safetyIdentifier = createHash("sha256").update(`bookly:${sessionId}`).digest("hex");
   const form = new FormData();
   form.set("sdp", sdp);
-  form.set("session", JSON.stringify(realtimeSessionConfig()));
+  form.set("session", JSON.stringify(realtimeSessionConfig({ userLoggedIn })));
 
   const upstream = await fetch("https://api.openai.com/v1/realtime/calls", {
     method: "POST",

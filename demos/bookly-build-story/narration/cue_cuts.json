@@ -1,0 +1,42 @@
+{
+  "source": "C:/Users/Kevin/Documents/Sound Recordings/Recording (7).m4a",
+  "sample_rate": 48000,
+  "channels": 1,
+  "cues": [
+    {"id": "S01.C01", "file": "001_scene01_cue01.wav", "start": 1.90, "end": 11.65},
+    {"id": "S01.C02", "file": "002_scene01_cue02.wav", "start": 11.65, "end": 21.25},
+    {"id": "S02.C01", "file": "003_scene02_cue01.wav", "start": 22.70, "end": 37.82},
+    {"id": "S02.C02", "file": "004_scene02_cue02.wav", "start": 37.82, "end": 52.70},
+    {"id": "S03.C01", "file": "005_scene03_cue01.wav", "start": 54.20, "end": 68.30},
+    {"id": "S03.C02", "file": "006_scene03_cue02.wav", "start": 68.30, "end": 87.42},
+    {"id": "S04.C01", "file": "007_scene04_cue01.wav", "start": 87.42, "end": 101.60},
+    {"id": "S04.C02", "file": "008_scene04_cue02.wav", "start": 101.60, "end": 113.60},
+    {"id": "S05.C01", "file": "009_scene05_cue01.wav", "start": 126.20, "end": 142.16},
+    {"id": "S05.C02", "file": "010_scene05_cue02.wav", "start": 142.16, "end": 164.05},
+    {"id": "S06.C01", "file": "011_scene06_cue01.wav", "start": 165.70, "end": 174.30},
+    {"id": "S06.C02", "file": "012_scene06_cue02.wav", "start": 174.30, "end": 184.00},
+    {"id": "S07.C01", "file": "013_scene07_cue01.wav", "start": 184.70, "end": 194.70},
+    {"id": "S07.C02", "file": "014_scene07_cue02.wav", "start": 194.70, "end": 202.65},
+    {"id": "S08.C01", "file": "015_scene08_cue01.wav", "start": 202.65, "end": 214.00},
+    {"id": "S08.C02", "file": "016_scene08_cue02.wav", "start": 214.00, "end": 224.55},
+    {"id": "S09.C01", "file": "017_scene09_cue01.wav", "start": 285.95, "end": 298.50},
+    {"id": "S09.C02", "file": "018_scene09_cue02.wav", "start": 298.50, "end": 310.35}
+  ],
+  "discarded": [
+    {
+      "start": 113.60,
+      "end": 126.20,
+      "reason": "Scene 5 false start: the narrator repeats the control-surface paragraph after stopping on ‘fluent.’"
+    },
+    {
+      "start": 224.55,
+      "end": 285.95,
+      "reason": "Two abandoned Scene 9 takes; the final complete take begins at 285.95 seconds."
+    },
+    {
+      "start": 310.35,
+      "end": 314.402,
+      "reason": "Post-take room tone."
+    }
+  ]
+}

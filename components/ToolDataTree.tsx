@@ -36,18 +36,6 @@ function dataKind(value: unknown): DataKind {
   return "unknown";
 }
 
-function typeLabel(kind: DataKind) {
-  switch (kind) {
-    case "array": return "List";
-    case "boolean": return "Yes / No";
-    case "null": return "Empty";
-    case "number": return "Number";
-    case "object": return "Group";
-    case "string": return "Text";
-    default: return "Value";
-  }
-}
-
 function humanizeKey(key: string) {
   if (/^\d+$/.test(key)) return `Item ${Number(key) + 1}`;
 
@@ -103,7 +91,6 @@ function DataEntry({ entryKey, value, depth }: { entryKey: string; value: unknow
         <summary>
           <ChevronRight className="tool-data-chevron" size={13} aria-hidden="true" />
           <span className="tool-data-key">{label}</span>
-          <span className="tool-data-type">{typeLabel(kind)}</span>
           <span className="tool-data-count">{collectionCount(kind, entries.length)}</span>
         </summary>
         <div className="tool-data-children">
@@ -121,7 +108,6 @@ function DataEntry({ entryKey, value, depth }: { entryKey: string; value: unknow
       <div className="tool-data-row-heading">
         <span className="tool-data-indent" aria-hidden="true" />
         <span className="tool-data-key">{label}</span>
-        <span className="tool-data-type">{typeLabel(kind)}</span>
         {!longForm && <span className="tool-data-value">{displayScalar(value, kind)}</span>}
       </div>
       {longForm && (

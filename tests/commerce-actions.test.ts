@@ -236,12 +236,29 @@ describe("Commerce and resolution tools", () => {
 
     const returned = await executeTool(db, "create_return_label", {
       order_id: "5678", items: [{ order_line_id: 2002, quantity: 1 }], return_method: "qr_code", customer_confirmed: true,
-    }, maya) as { ok: boolean; return: { return_id: string; prepaid: boolean } };
+    }, maya) as {
+      ok: boolean;
+      return: {
+        return_id: string;
+        prepaid: boolean;
+        qr_code: string;
+        carrier: { name: string; service: string; carrier_reference: string };
+        drop_off: { printer_required: boolean; packaging_required: boolean; location_types: string[] };
+      };
+    };
     assert.equal(returned.ok, true);
     assert.equal(returned.return.prepaid, true);
-    const status = await executeTool(db, "get_return_status", { return_id: returned.return.return_id }, maya) as { return: { status: string; items: unknown[] } };
+    assert.match(returned.return.qr_code, /^BOOKLY\|UPS_RETURN\|RET_[A-F0-9]{14}\|1ZBKL[A-F0-9]{13}$/);
+    assert.equal(returned.return.carrier.name, "UPS");
+    assert.equal(returned.return.carrier.service, "UPS Returns");
+    assert.match(returned.return.carrier.carrier_reference, /^1ZBKL[A-F0-9]{13}$/);
+    assert.equal(returned.return.drop_off.printer_required, false);
+    assert.equal(returned.return.drop_off.packaging_required, true);
+    assert.ok(returned.return.drop_off.location_types.includes("The UPS Store"));
+    const status = await executeTool(db, "get_return_status", { return_id: returned.return.return_id }, maya) as { return: { status: string; items: unknown[]; carrier: { name: string } } };
     assert.equal(status.return.status, "label_created");
     assert.equal(status.return.items.length, 1);
+    assert.equal(status.return.carrier.name, "UPS");
   }));
 
   test("creates an evidence-rich support case before human handoff", async () => withDatabase(async (db) => {

@@ -688,6 +688,7 @@ function processRefund(db: BooklyDatabase, rawInput: unknown, customer?: Authent
         simulated_payment_processor: true,
         payment_reference: paymentReference,
         amount: money(quote.amount_cents),
+        reason: quote.reason,
         items: items.map((item) => ({ title: item.title, quantity: item.quantity })),
         expected_bank_timing: "5-10 business days",
         created_at: createdAt,

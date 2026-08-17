@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene02",
+  "fps": 60,
+  "expected_duration_frames": 1873,
+  "actual_duration_frames": 1873,
+  "events": [
+    {
+      "cue_id": "S02.C01",
+      "visual_event_id": "s02_unified_widget",
+      "event": "s02_unified_widget",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 387,
+      "actual_end_frame": 387
+    },
+    {
+      "cue_id": "S02.C01",
+      "visual_event_id": "s02_unified_widget",
+      "event": "s02_unified_widget",
+      "expected_start_frame": 387,
+      "actual_start_frame": 387,
+      "expected_end_frame": 914,
+      "actual_end_frame": 914
+    },
+    {
+      "cue_id": "S02.C02",
+      "visual_event_id": "s02_shared_context",
+      "event": "s02_shared_context",
+      "expected_start_frame": 932,
+      "actual_start_frame": 932,
+      "expected_end_frame": 1307,
+      "actual_end_frame": 1307
+    },
+    {
+      "cue_id": "S02.C02",
+      "visual_event_id": "s02_shared_context",
+      "event": "s02_shared_context",
+      "expected_start_frame": 1307,
+      "actual_start_frame": 1307,
+      "expected_end_frame": 1825,
+      "actual_end_frame": 1825
+    }
+  ]
+}

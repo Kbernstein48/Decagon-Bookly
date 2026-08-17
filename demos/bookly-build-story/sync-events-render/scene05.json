@@ -1,0 +1,44 @@
+{
+  "scene_id": "scene05",
+  "fps": 60,
+  "expected_duration_frames": 2344,
+  "actual_duration_frames": 2344,
+  "events": [
+    {
+      "cue_id": "S05.C01",
+      "visual_event_id": "s05_control_surface_split",
+      "event": "s05_control_surface_split",
+      "expected_start_frame": 6,
+      "actual_start_frame": 6,
+      "expected_end_frame": 408,
+      "actual_end_frame": 408
+    },
+    {
+      "cue_id": "S05.C01",
+      "visual_event_id": "s05_control_surface_split",
+      "event": "s05_control_surface_split",
+      "expected_start_frame": 408,
+      "actual_start_frame": 408,
+      "expected_end_frame": 964,
+      "actual_end_frame": 965
+    },
+    {
+      "cue_id": "S05.C02",
+      "visual_event_id": "s05_deterministic_control",
+      "event": "s05_deterministic_control",
+      "expected_start_frame": 982,
+      "actual_start_frame": 982,
+      "expected_end_frame": 1534,
+      "actual_end_frame": 1534
+    },
+    {
+      "cue_id": "S05.C02",
+      "visual_event_id": "s05_deterministic_control",
+      "event": "s05_deterministic_control",
+      "expected_start_frame": 1534,
+      "actual_start_frame": 1534,
+      "expected_end_frame": 2296,
+      "actual_end_frame": 2296
+    }
+  ]
+}

@@ -45,6 +45,33 @@ const handoffSchema = z.object({ case_id: z.string().trim().min(1) });
 const timestamp = () => new Date().toISOString();
 const normalizeOrderId = (value: string) => value.trim().replace(/^#/, "");
 
+function upsCarrierReference(returnId: string) {
+  const identifier = returnId.replace(/[^a-z0-9]/gi, "").slice(-13).padStart(13, "0").toUpperCase();
+  return `1ZBKL${identifier}`;
+}
+
+function returnDropOffBy(createdAt: string) {
+  return new Date(new Date(createdAt).getTime() + 14 * 86_400_000).toISOString();
+}
+
+function qrReturnPresentation(returnId: string, createdAt: string) {
+  const carrierReference = upsCarrierReference(returnId);
+  return {
+    carrier: {
+      name: "UPS",
+      service: "UPS Returns",
+      carrier_reference: carrierReference,
+    },
+    drop_off: {
+      location_types: ["The UPS Store", "participating UPS location"],
+      printer_required: false,
+      packaging_required: true,
+      instructions: "Pack and seal the return, then show this QR code to a UPS associate. They will scan it and print the prepaid return label.",
+    },
+    drop_off_by: returnDropOffBy(createdAt),
+  };
+}
+
 function invalid(error: z.ZodError) {
   return { ok: false, error: { code: "INVALID_TOOL_INPUT", message: "The tool input was incomplete or invalid.", details: error.issues } };
 }
@@ -187,13 +214,27 @@ function createReturnLabel(db: BooklyDatabase, rawInput: unknown, customer?: Cus
   const returnId = `ret_${randomUUID().replaceAll("-", "").slice(0, 14)}`;
   const createdAt = timestamp();
   const labelUrl = `/returns/${returnId}/label`;
-  const qrCode = `BOOKLY-RETURN-${returnId.toUpperCase()}`;
+  const carrierReference = upsCarrierReference(returnId);
+  const qrCode = `BOOKLY|UPS_RETURN|${returnId.toUpperCase()}|${carrierReference}`;
   db.transaction(() => {
     db.prepare(`INSERT INTO return_requests (id, order_id, customer_id, status, return_method, label_url, qr_code, created_at, updated_at) VALUES (?, ?, ?, 'label_created', ?, ?, ?, ?, ?)`)
       .run(returnId, order.id, customer.id, parsed.data.return_method, labelUrl, qrCode, createdAt, createdAt);
     for (const item of selected) db.prepare("INSERT INTO return_items (return_id, order_line_id, quantity) VALUES (?, ?, ?)").run(returnId, item.order_line_id, item.quantity);
   })();
-  return { ok: true, return: { return_id: returnId, order_id: order.id, status: "label_created", return_method: parsed.data.return_method, items: selected, label_url: labelUrl, qr_code: qrCode, drop_off_by: new Date(Date.now() + 14 * 86_400_000).toISOString(), prepaid: true } };
+  return {
+    ok: true,
+    return: {
+      return_id: returnId,
+      order_id: order.id,
+      status: "label_created",
+      return_method: parsed.data.return_method,
+      items: selected,
+      label_url: labelUrl,
+      qr_code: qrCode,
+      ...(parsed.data.return_method === "qr_code" ? qrReturnPresentation(returnId, createdAt) : { drop_off_by: returnDropOffBy(createdAt) }),
+      prepaid: true,
+    },
+  };
 }
 
 function getReturnStatus(db: BooklyDatabase, rawInput: unknown, customer?: Customer) {
@@ -203,7 +244,10 @@ function getReturnStatus(db: BooklyDatabase, rawInput: unknown, customer?: Custo
   const request = db.prepare("SELECT * FROM return_requests WHERE id = ? AND customer_id = ?").get(parsed.data.return_id, customer.id) as Record<string, unknown> | undefined;
   if (!request) return { ok: false, error: { code: "RETURN_NOT_FOUND", message: "That return was not found in the signed-in account." } };
   const items = db.prepare(`SELECT ri.order_line_id, ri.quantity, ol.title FROM return_items ri JOIN order_lines ol ON ol.id = ri.order_line_id WHERE ri.return_id = ?`).all(parsed.data.return_id);
-  return { ok: true, return: { ...request, items } };
+  const qrPresentation = request.return_method === "qr_code" && typeof request.created_at === "string"
+    ? qrReturnPresentation(parsed.data.return_id, request.created_at)
+    : {};
+  return { ok: true, return: { ...request, ...qrPresentation, items } };
 }
 
 function createSupportCase(db: BooklyDatabase, rawInput: unknown, customer?: Customer) {

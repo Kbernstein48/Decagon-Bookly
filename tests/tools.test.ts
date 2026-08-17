@@ -159,10 +159,11 @@ describe("Bookly support tools", () => {
     const completed = await executeTool(db, "process_refund", {
       confirmation_token: prepared.confirmation_token,
       customer_confirmed: true,
-    }, maya) as { ok: boolean; refund: { status: string; simulated_payment_processor: boolean } };
+    }, maya) as { ok: boolean; refund: { status: string; simulated_payment_processor: boolean; reason: string } };
     assert.equal(completed.ok, true);
     assert.equal(completed.refund.status, "succeeded");
     assert.equal(completed.refund.simulated_payment_processor, true);
+    assert.equal(completed.refund.reason, "I ordered one copy too many");
 
     const duplicate = await executeTool(db, "process_refund", {
       confirmation_token: prepared.confirmation_token,

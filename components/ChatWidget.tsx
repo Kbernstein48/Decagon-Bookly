@@ -5,10 +5,12 @@ import {
   ChevronDown,
   CircleAlert,
   LogOut,
+  MapPin,
   MessageCircle,
   Mic,
   MicOff,
   Minus,
+  PackageCheck,
   RotateCcw,
   Send,
   ShieldCheck,
@@ -18,8 +20,9 @@ import {
   X,
 } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { CSSProperties, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { CSSProperties, FormEvent, Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 import { InlineAuthForm, type InlineAuthCredentials } from "@/components/InlineAuthForm";
 import { ToolDataTree } from "@/components/ToolDataTree";
 import {
@@ -31,6 +34,14 @@ import {
 } from "@/lib/browser-auth";
 import { announceBooklyCartChange } from "@/lib/browser-cart";
 import { announceBooklyCheckoutChange } from "@/lib/browser-checkout";
+import { booklyAgentInstructions } from "@/lib/agent-instructions";
+import { refundPreviewFromOutput, type RefundPreview } from "@/lib/refund-preview";
+import {
+  AUTHENTICATION_PRECONDITION_METADATA_KEY,
+  AUTHENTICATION_PROMPT_MESSAGE,
+  authenticationNarrationEvent,
+  requiresCustomerAuthentication,
+} from "@/lib/realtime-auth-precondition";
 
 type MessageItem = {
   kind: "message";
@@ -75,6 +86,15 @@ type BookPreview = {
   description: string;
 };
 
+type ReturnDropOffPass = {
+  returnId: string;
+  orderId: string;
+  qrCode: string;
+  dropOffBy: string;
+  carrierReference: string;
+  items: Array<{ title: string; quantity: number }>;
+};
+
 type RealtimeEvent = {
   type: string;
   delta?: string;
@@ -86,6 +106,7 @@ type RealtimeEvent = {
     id?: string;
     status?: string;
     status_details?: { type?: string; reason?: string };
+    metadata?: Record<string, string>;
     output?: Array<{
       type?: string;
       name?: string;
@@ -95,6 +116,22 @@ type RealtimeEvent = {
     }>;
   };
 };
+
+type PendingAuthenticationNarration = {
+  resolve: (completed: boolean) => void;
+  timeoutId: number;
+};
+
+function syncRealtimeAuthenticationContext(channel: RTCDataChannel | null, customer: AuthCustomer | null) {
+  if (!channel || channel.readyState !== "open") return;
+  channel.send(JSON.stringify({
+    type: "session.update",
+    session: {
+      type: "realtime",
+      instructions: booklyAgentInstructions(Boolean(customer)),
+    },
+  }));
+}
 
 const toolLabels: Record<string, string> = {
   open_book: "Book detail opened",
@@ -112,7 +149,6 @@ const toolLabels: Record<string, string> = {
   add_to_wishlist: "Added to wishlist",
   remove_from_wishlist: "Removed from wishlist",
   create_back_in_stock_alert: "Stock alert created",
-  authenticate_customer: "Account authentication",
   lookup_order: "Order lookup",
   check_order_modification_eligibility: "Order change checked",
   cancel_order: "Order cancelled",
@@ -130,36 +166,14 @@ const toolLabels: Record<string, string> = {
   search_knowledge: "Knowledge search · LanceDB",
 };
 
-const authenticatedToolNames = new Set([
-  "authenticate_customer",
-  "begin_checkout",
-  "review_checkout",
-  "submit_order",
-  "lookup_order",
-  "investigate_shipment",
-  "open_shipping_investigation",
-  "prepare_refund",
-  "process_refund",
-  "get_wishlist",
-  "add_to_wishlist",
-  "remove_from_wishlist",
-  "create_back_in_stock_alert",
-  "check_order_modification_eligibility",
-  "cancel_order",
-  "update_shipping_address",
-  "prepare_replacement",
-  "create_replacement",
-  "create_return_label",
-  "get_return_status",
-  "create_support_case",
-  "handoff_to_agent",
-]);
-
 const quickPrompts = [
   "Add A Glass Horizon to my cart",
   "My order says delivered, but I can't find it",
-  "I want to speak with a person",
+  "I need a UPS QR code for a return",
 ];
+
+const CHECKOUT_HANDOFF_DELAY_MS = 2_000;
+const AUTHENTICATION_NARRATION_TIMEOUT_MS = 12_000;
 
 function now() {
   return new Date().toISOString();
@@ -209,9 +223,196 @@ function checkoutActionFromOutput(output: unknown) {
   return { checkoutId, checkoutUrl };
 }
 
+function returnDropOffPassFromTool(item: ToolItem): ReturnDropOffPass | null {
+  if (item.toolName !== "create_return_label" || item.status !== "completed" || !item.output || typeof item.output !== "object") return null;
+  const result = item.output as {
+    ok?: unknown;
+    return?: {
+      return_id?: unknown;
+      order_id?: unknown;
+      return_method?: unknown;
+      qr_code?: unknown;
+      drop_off_by?: unknown;
+      carrier?: { name?: unknown; carrier_reference?: unknown };
+      items?: unknown;
+    };
+  };
+  const value = result.return;
+  if (
+    result.ok !== true ||
+    value?.return_method !== "qr_code" ||
+    value.carrier?.name !== "UPS" ||
+    typeof value.return_id !== "string" ||
+    typeof value.order_id !== "string" ||
+    typeof value.qr_code !== "string" ||
+    typeof value.drop_off_by !== "string" ||
+    typeof value.carrier.carrier_reference !== "string"
+  ) return null;
+  const items = Array.isArray(value.items)
+    ? value.items.flatMap((entry) => {
+      if (!entry || typeof entry !== "object") return [];
+      const candidate = entry as { title?: unknown; quantity?: unknown };
+      return typeof candidate.title === "string" && typeof candidate.quantity === "number"
+        ? [{ title: candidate.title, quantity: candidate.quantity }]
+        : [];
+    })
+    : [];
+  return {
+    returnId: value.return_id,
+    orderId: value.order_id,
+    qrCode: value.qr_code,
+    dropOffBy: value.drop_off_by,
+    carrierReference: value.carrier.carrier_reference,
+    items,
+  };
+}
+
+function formatDropOffDate(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(date);
+}
+
+function ReturnDropOffCard({ pass }: { pass: ReturnDropOffPass }) {
+  const itemSummary = pass.items.length > 0
+    ? pass.items.map((item) => `${item.quantity}× ${item.title}`).join(", ")
+    : `Return for order #${pass.orderId}`;
+  return (
+    <section className="return-qr-card" aria-labelledby={`return-pass-${pass.returnId}`}>
+      <header className="return-qr-header">
+        <span className="ups-mark" aria-label="UPS">UPS</span>
+        <div>
+          <p>UPS drop-off</p>
+          <h3 id={`return-pass-${pass.returnId}`}>Prepaid return pass</h3>
+        </div>
+        <span className="return-prepaid-badge"><PackageCheck size={11} /> Prepaid</span>
+      </header>
+      <div className="return-qr-body">
+        <div className="return-qr-code">
+          <QRCodeSVG
+            value={pass.qrCode}
+            size={142}
+            level="M"
+            marginSize={4}
+            bgColor="#ffffff"
+            fgColor="#171717"
+            title={`UPS return QR code for return ${pass.returnId}`}
+          />
+        </div>
+        <div className="return-qr-copy">
+          <span>No printer needed</span>
+          <h4>Show this code at UPS</h4>
+          <p>Pack and seal your return. A UPS associate will scan this code and print the label.</p>
+          <dl>
+            <div><dt>Drop off by</dt><dd>{formatDropOffDate(pass.dropOffBy)}</dd></div>
+            <div><dt>Return ID</dt><dd>{pass.returnId}</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div className="return-qr-item" title={itemSummary}>{itemSummary}</div>
+      <footer>
+        <span><MapPin size={12} /> The UPS Store or another participating UPS location</span>
+        <code>{pass.carrierReference}</code>
+      </footer>
+    </section>
+  );
+}
+
+function formatRefundDate(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  }).format(date);
+}
+
+function RefundDetailWindow({
+  refund,
+  index,
+  total,
+  onClose,
+}: {
+  refund: RefundPreview;
+  index: number;
+  total: number;
+  onClose: () => void;
+}) {
+  const titleId = `refund-detail-title-${refund.refundId}`;
+  const descriptionId = `refund-detail-description-${refund.refundId}`;
+  const stackStyle = {
+    "--book-detail-offset-x": `${index * 46}px`,
+    "--book-detail-offset-y": `${index * 8}px`,
+    "--book-detail-layer": index,
+  } as CSSProperties;
+
+  return (
+    <aside
+      className="book-detail-window refund-detail-window"
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby={titleId}
+      aria-describedby={descriptionId}
+      style={stackStyle}
+    >
+      <header className="book-detail-header refund-detail-header">
+        <span><RotateCcw size={15} /> Refund receipt{total > 1 ? ` · ${total - index} of ${total}` : ""}</span>
+        <button type="button" onClick={onClose} aria-label={`Close refund ${refund.refundId} details`}>
+          <X size={18} />
+        </button>
+      </header>
+      <div className="book-detail-scroll refund-detail-scroll">
+        <section className="refund-detail-hero" id={descriptionId}>
+          <span><ShieldCheck size={14} /> Refund processed</span>
+          <strong>{refund.amount}</strong>
+          <p>Returning to the original payment method</p>
+        </section>
+
+        <div className="refund-detail-facts" aria-label="Refund overview">
+          <span><small>Order</small><strong>#{refund.orderId}</strong></span>
+          <span><small>Status</small><strong>Succeeded</strong></span>
+          <span title={refund.refundId}><small>Refund ID</small><strong>{refund.refundId}</strong></span>
+        </div>
+
+        <section className="refund-detail-section">
+          <p className="refund-detail-kicker">Refunded items</p>
+          <h2 id={titleId}>Your refund is on its way</h2>
+          <div className="refund-item-list">
+            {refund.items.map((item, itemIndex) => (
+              <article key={`${item.title}-${itemIndex}`}>
+                <span>{item.quantity}</span>
+                <div><strong>{item.title}</strong><small>Quantity refunded</small></div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="refund-detail-section refund-reason">
+          <p className="refund-detail-kicker">Reason</p>
+          <p>{refund.reason}</p>
+        </section>
+
+        <dl className="refund-detail-meta">
+          <div><dt>Processed</dt><dd>{formatRefundDate(refund.createdAt)}</dd></div>
+          <div><dt>Payment route</dt><dd>Original payment method</dd></div>
+          <div><dt>Processor reference</dt><dd><code>{refund.paymentReference}</code></dd></div>
+        </dl>
+        <p className="refund-simulation-note"><CircleAlert size={13} /> Demo refund persisted in Bookly with a simulated payment processor.</p>
+      </div>
+      <footer className="book-detail-footer refund-detail-footer">
+        <span>Expected bank timing</span><strong>{refund.expectedBankTiming}</strong>
+      </footer>
+    </aside>
+  );
+}
+
 export function ChatWidget() {
   const router = useRouter();
-  const [open, setOpen] = useState(true);
+  const pathname = usePathname();
+  const [open, setOpen] = useState(pathname !== "/demo-explainer");
   const [sessionId, setSessionId] = useState("");
   const [status, setStatus] = useState<ConnectionStatus>("connecting");
   const [statusDetail, setStatusDetail] = useState("Connecting securely…");
@@ -226,6 +427,7 @@ export function ChatWidget() {
   const [authError, setAuthError] = useState("");
   const [authSubmitting, setAuthSubmitting] = useState(false);
   const [bookPreviews, setBookPreviews] = useState<BookPreview[]>([]);
+  const [refundPreviews, setRefundPreviews] = useState<RefundPreview[]>([]);
 
   const peerRef = useRef<RTCPeerConnection | null>(null);
   const channelRef = useRef<RTCDataChannel | null>(null);
@@ -249,31 +451,46 @@ export function ChatWidget() {
   const authCustomerRef = useRef<AuthCustomer | null>(null);
   const authRequestResolverRef = useRef<((authenticated: boolean) => void) | null>(null);
   const authPausedVoiceRef = useRef(false);
+  const authNarrationRequestsRef = useRef(new Map<string, PendingAuthenticationNarration>());
+  const previousPathnameRef = useRef(pathname);
 
   useEffect(() => { statusRef.current = status; }, [status]);
   useEffect(() => { openRef.current = open; }, [open]);
+  useEffect(() => {
+    if (pathname === "/demo-explainer" && previousPathnameRef.current !== pathname) setOpen(false);
+    previousPathnameRef.current = pathname;
+  }, [pathname]);
   useEffect(() => { voiceActiveRef.current = voiceActive; }, [voiceActive]);
   useEffect(() => { userSpeakingRef.current = userSpeaking; }, [userSpeaking]);
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [timeline, voiceActive, open]);
+  useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [timeline, voiceActive, open, activeAuthTraceId]);
+  useEffect(() => () => {
+    for (const pending of authNarrationRequestsRef.current.values()) {
+      window.clearTimeout(pending.timeoutId);
+      pending.resolve(false);
+    }
+    authNarrationRequestsRef.current.clear();
+  }, []);
   useEffect(() => {
     const handleAuthChange = (event: Event) => {
       const customer = (event as CustomEvent<AuthCustomer | null>).detail;
       authCustomerRef.current = customer;
       setAuthCustomer(customer);
+      syncRealtimeAuthenticationContext(channelRef.current, customer);
     };
     window.addEventListener(BOOKLY_AUTH_CHANGED_EVENT, handleAuthChange);
     return () => window.removeEventListener(BOOKLY_AUTH_CHANGED_EVENT, handleAuthChange);
   }, []);
   useEffect(() => {
-    if (bookPreviews.length === 0) return;
+    if (bookPreviews.length === 0 && refundPreviews.length === 0) return;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape" && !activeAuthTraceId) {
-        setBookPreviews((books) => books.slice(0, -1));
+        if (refundPreviews.length > 0) setRefundPreviews((refunds) => refunds.slice(0, -1));
+        else setBookPreviews((books) => books.slice(0, -1));
       }
     };
     window.addEventListener("keydown", closeOnEscape);
     return () => window.removeEventListener("keydown", closeOnEscape);
-  }, [activeAuthTraceId, bookPreviews.length]);
+  }, [activeAuthTraceId, bookPreviews.length, refundPreviews.length]);
 
   const persistMessage = useCallback(async (message: MessageItem) => {
     try {
@@ -385,6 +602,7 @@ export function ChatWidget() {
   const rememberAuthenticatedCustomer = useCallback((customer: AuthCustomer | null) => {
     authCustomerRef.current = customer;
     setAuthCustomer(customer);
+    syncRealtimeAuthenticationContext(channelRef.current, customer);
     announceBooklyAuthChange(customer);
   }, []);
 
@@ -405,6 +623,43 @@ export function ChatWidget() {
     }
   }, [rememberAuthenticatedCustomer, sessionId]);
 
+  const narrateAuthenticationPrecondition = useCallback((traceId: string) => {
+    const channel = channelRef.current;
+    if (!channel || channel.readyState !== "open") return Promise.resolve(false);
+
+    // Pause only the local microphone. The remote audio element and Realtime
+    // output remain live so the dedicated sign-in message is still heard.
+    const track = micStreamRef.current?.getAudioTracks()[0];
+    if (track?.enabled) {
+      track.enabled = false;
+      authPausedVoiceRef.current = true;
+    }
+    userSpeakingRef.current = false;
+    setUserSpeaking(false);
+    setStatus("thinking");
+    setStatusDetail("Explaining the sign-in step…");
+
+    const requestId = `${traceId}-${crypto.randomUUID()}`;
+    return new Promise<boolean>((resolve) => {
+      const timeoutId = window.setTimeout(() => {
+        authNarrationRequestsRef.current.delete(requestId);
+        resolve(false);
+      }, AUTHENTICATION_NARRATION_TIMEOUT_MS);
+      authNarrationRequestsRef.current.set(requestId, { resolve, timeoutId });
+
+      try {
+        channel.send(JSON.stringify(authenticationNarrationEvent(
+          requestId,
+          lastModalityRef.current === "voice",
+        )));
+      } catch {
+        window.clearTimeout(timeoutId);
+        authNarrationRequestsRef.current.delete(requestId);
+        resolve(false);
+      }
+    });
+  }, []);
+
   const finishAuthenticationRequest = useCallback((authenticated: boolean) => {
     setActiveAuthTraceId(null);
     setAuthSubmitting(false);
@@ -422,12 +677,27 @@ export function ChatWidget() {
     if (authCustomerRef.current) return true;
     if (await refreshAuthentication()) return true;
 
-    const track = micStreamRef.current?.getAudioTracks()[0];
-    if (track?.enabled) {
-      track.enabled = false;
-      authPausedVoiceRef.current = true;
+    const narrated = await narrateAuthenticationPrecondition(traceId);
+    if (!narrated) {
+      const fallbackMessage: MessageItem = {
+        kind: "message",
+        id: `assistant-auth-${traceId}`,
+        role: "assistant",
+        content: AUTHENTICATION_PROMPT_MESSAGE,
+        modality: "text",
+        createdAt: now(),
+      };
+      setTimeline((items) => {
+        const pendingActionIndex = items.findIndex((item) => item.id === traceId);
+        if (pendingActionIndex < 0) return [...items, fallbackMessage];
+        return [
+          ...items.slice(0, pendingActionIndex),
+          fallbackMessage,
+          ...items.slice(pendingActionIndex),
+        ];
+      });
     }
-    setUserSpeaking(false);
+
     setAuthError("");
     setActiveAuthTraceId(traceId);
     setStatus("thinking");
@@ -435,7 +705,7 @@ export function ChatWidget() {
     return new Promise<boolean>((resolve) => {
       authRequestResolverRef.current = resolve;
     });
-  }, [refreshAuthentication]);
+  }, [narrateAuthenticationPrecondition, refreshAuthentication]);
 
   const executeFunctionCalls = useCallback(async (calls: NonNullable<RealtimeEvent["response"]>["output"]) => {
     const channel = channelRef.current;
@@ -446,22 +716,24 @@ export function ChatWidget() {
       try { argumentsValue = JSON.parse(call.arguments || "{}"); } catch { argumentsValue = { raw: call.arguments }; }
       const localTraceId = `tool-${call.call_id}`;
       const createdAt = now();
+      const requiresAuthentication = requiresCustomerAuthentication(call.name);
+      let output: unknown;
+      const authenticationGranted = !requiresAuthentication || await ensureCustomerAuthentication(localTraceId);
+      if (!authenticationGranted) {
+        output = { ok: false, error: { code: "AUTHENTICATION_CANCELLED", message: "The customer closed the account sign-in prompt." } };
+      }
       setTimeline((items) => [...items, {
         kind: "tool",
         id: localTraceId,
         callId: call.call_id!,
         toolName: call.name!,
         input: argumentsValue,
-        status: "running",
+        output: authenticationGranted ? undefined : output,
+        status: authenticationGranted ? "running" : "failed",
         createdAt,
       }]);
 
-      let output: unknown;
-      const authenticationGranted = !authenticatedToolNames.has(call.name) || await ensureCustomerAuthentication(localTraceId);
-      if (!authenticationGranted) {
-        output = { ok: false, error: { code: "AUTHENTICATION_CANCELLED", message: "The customer closed the account sign-in prompt." } };
-        setTimeline((items) => items.map((item) => item.id === localTraceId ? { ...item, output, status: "failed" } as ToolItem : item));
-      } else {
+      if (authenticationGranted) {
         try {
           const response = await fetch("/api/tools", {
             method: "POST",
@@ -473,17 +745,32 @@ export function ChatWidget() {
           if (call.name === "open_book") {
             const nextBooks = bookPreviewsFromOutput(output);
             if (nextBooks.length > 0) {
+              setRefundPreviews([]);
               setBookPreviews((currentBooks) => {
                 const incomingSlugs = new Set(nextBooks.map((book) => book.slug));
                 return [...currentBooks.filter((book) => !incomingSlugs.has(book.slug)), ...nextBooks];
               });
             }
           }
+          if (call.name === "process_refund") {
+            const refundPreview = refundPreviewFromOutput(output);
+            if (refundPreview) {
+              setBookPreviews([]);
+              setRefundPreviews((currentRefunds) => [
+                ...currentRefunds.filter((refund) => refund.refundId !== refundPreview.refundId),
+                refundPreview,
+              ]);
+            }
+          }
           if (["add_to_cart", "update_cart_item", "remove_from_cart", "clear_cart"].includes(call.name) && (output as { ok?: boolean })?.ok) {
             announceBooklyCartChange();
           }
           const checkoutAction = checkoutActionFromOutput(output);
-          if (checkoutAction && ["begin_checkout", "review_checkout"].includes(call.name)) {
+          if (checkoutAction && call.name === "begin_checkout") {
+            router.push(checkoutAction.checkoutUrl);
+            setStatusDetail("Opening secure checkout…");
+            await new Promise((resolve) => window.setTimeout(resolve, CHECKOUT_HANDOFF_DELAY_MS));
+          } else if (checkoutAction && call.name === "review_checkout") {
             router.push(checkoutAction.checkoutUrl);
           }
           if (checkoutAction && call.name === "submit_order") {
@@ -566,6 +853,17 @@ export function ChatWidget() {
         .map((part) => part.text || part.transcript || "")
         .join("") || "";
       const calls = event.response?.output?.filter((item) => item.type === "function_call") ?? [];
+      const authenticationNarrationId = event.response?.metadata?.[AUTHENTICATION_PRECONDITION_METADATA_KEY];
+      if (authenticationNarrationId) {
+        finalizeAssistant(responseId, fallback, interrupted);
+        const pendingNarration = authNarrationRequestsRef.current.get(authenticationNarrationId);
+        if (pendingNarration) {
+          window.clearTimeout(pendingNarration.timeoutId);
+          authNarrationRequestsRef.current.delete(authenticationNarrationId);
+          pendingNarration.resolve(!interrupted);
+        }
+        return;
+      }
       if (calls.length > 0 && !interrupted) {
         // A response can contain spoken/written preamble text followed by a tool call.
         // Finalize that text before the tool runs so its streaming caret does not linger.
@@ -641,6 +939,8 @@ export function ChatWidget() {
           channel.addEventListener("open", () => { window.clearTimeout(timeout); resolve(); }, { once: true });
         });
         if (cancelled) return;
+
+        syncRealtimeAuthenticationContext(channel, authCustomerRef.current);
 
         if (messages.length) {
           const transcript = messages.slice(-20).map((message) => `${message.role === "user" ? "Customer" : "Bookly"}: ${message.content}`).join("\n");
@@ -840,6 +1140,15 @@ export function ChatWidget() {
 
   return (
     <>
+      {refundPreviews.map((refund, index) => (
+        <RefundDetailWindow
+          key={refund.refundId}
+          refund={refund}
+          index={index}
+          total={refundPreviews.length}
+          onClose={() => setRefundPreviews((refunds) => refunds.filter((item) => item.refundId !== refund.refundId))}
+        />
+      ))}
       {bookPreviews.map((bookPreview, index) => {
         const titleId = `book-detail-title-${bookPreview.slug}`;
         const descriptionId = `book-detail-description-${bookPreview.slug}`;
@@ -921,7 +1230,7 @@ export function ChatWidget() {
           <button onClick={() => void resetDemoDatabase()} aria-label="Reset demo database" title="Reset demo database" disabled={resetting}>
             <RotateCcw size={17} />
           </button>
-          <button onClick={() => { setBookPreviews([]); setOpen(false); }} aria-label="Minimize chat"><Minus size={20} /></button>
+          <button onClick={() => { setBookPreviews([]); setRefundPreviews([]); setOpen(false); }} aria-label="Minimize chat"><Minus size={20} /></button>
         </div>
       </header>
 
@@ -962,37 +1271,40 @@ export function ChatWidget() {
               </div>
             </div>
           </div>
-        ) : item.id === activeAuthTraceId ? (
+        ) : (
+          <Fragment key={item.id}>
+            <details className={`tool-trace ${item.status}`}>
+              <summary>
+                <span className="tool-icon"><Wrench size={14} /></span>
+                <span><strong>{toolLabels[item.toolName] || item.toolName}</strong><small>{item.status === "running" ? "Running tool…" : `${item.status} · ${item.durationMs ?? "—"} ms`}</small></span>
+                <ChevronDown size={15} className="trace-chevron" />
+              </summary>
+              <div className="trace-details">
+                <section className="trace-section" aria-label="Tool input">
+                  <div className="trace-section-heading"><h4>Input</h4><span>Provided to the tool</span></div>
+                  <ToolDataTree value={item.input} />
+                </section>
+                {item.output !== undefined && (
+                  <section className="trace-section trace-section-output" aria-label="Tool output">
+                    <div className="trace-section-heading"><h4>Output</h4><span>Returned by the tool</span></div>
+                    <ToolDataTree value={item.output} />
+                  </section>
+                )}
+              </div>
+            </details>
+            {returnDropOffPassFromTool(item) && <ReturnDropOffCard pass={returnDropOffPassFromTool(item)!} />}
+          </Fragment>
+        ))}
+        {activeAuthTraceId && (
           <InlineAuthForm
-            key={item.id}
-            description="Sign in with the email from your Bookly order. Your account will stay active across the site while this browser session continues."
+            description="Voice input is paused while you sign in. Once sign-in succeeds, the microphone and your original action will continue automatically."
             demoEmail="maya.chen@example.com"
             error={authError}
             submitting={authSubmitting}
             onSubmit={handleAuthSubmit}
             onCancel={() => finishAuthenticationRequest(false)}
           />
-        ) : (
-          <details className={`tool-trace ${item.status}`} key={item.id}>
-            <summary>
-              <span className="tool-icon"><Wrench size={14} /></span>
-              <span><strong>{toolLabels[item.toolName] || item.toolName}</strong><small>{item.status === "running" ? "Running tool…" : `${item.status} · ${item.durationMs ?? "—"} ms`}</small></span>
-              <ChevronDown size={15} className="trace-chevron" />
-            </summary>
-            <div className="trace-details">
-              <section className="trace-section" aria-label="Tool input">
-                <div className="trace-section-heading"><h4>Input</h4><span>Provided to the tool</span></div>
-                <ToolDataTree value={item.input} />
-              </section>
-              {item.output !== undefined && (
-                <section className="trace-section trace-section-output" aria-label="Tool output">
-                  <div className="trace-section-heading"><h4>Output</h4><span>Returned by the tool</span></div>
-                  <ToolDataTree value={item.output} />
-                </section>
-              )}
-            </div>
-          </details>
-        ))}
+        )}
         <div ref={endRef} />
       </div>
 
@@ -1000,8 +1312,8 @@ export function ChatWidget() {
         <button className={`voice-recording ${userSpeaking ? "speaking" : ""}`} onClick={() => void toggleVoice()}>
           <span className="voice-pulse"><Mic size={18} /></span>
           <span>
-            <strong>{userSpeaking ? "Listening to you…" : status === "thinking" ? "You can interrupt" : "Voice mode is on"}</strong>
-            <small>{userSpeaking ? "Your words appear in the conversation" : status === "thinking" ? "Start speaking to stop the response" : "Speak naturally — pause when done"}</small>
+            <strong>{activeAuthTraceId ? "Voice input paused for sign-in" : userSpeaking ? "Listening to you…" : status === "thinking" ? "You can interrupt" : "Voice mode is on"}</strong>
+            <small>{activeAuthTraceId ? "Complete the form to resume automatically" : userSpeaking ? "Your words appear in the conversation" : status === "thinking" ? "Start speaking to stop the response" : "Speak naturally — pause when done"}</small>
           </span>
           <MicOff size={17} />
         </button>

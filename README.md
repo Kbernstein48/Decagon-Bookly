@@ -86,6 +86,16 @@ This creates a progressive trust model: discovery and navigation feel instant; a
   <sub>Private sign-in → authenticated order lookup → exact $32.39 quote → explicit later-turn confirmation → atomic refund.</sub>
 </p>
 
+### Complete checkout in action
+
+<p align="center">
+  <img src="./public/bookly-checkout-demo.gif" alt="Bookly adding a hardcover to the cart, enforcing checkout confirmation and login, reviewing payment and shipping details, and completing the simulated order" width="960" />
+</p>
+
+<p align="center">
+  <sub>Canonical catalog lookup → synchronized cart → explicit checkout confirmation → private sign-in → secure review → simulated payment and saved order.</sub>
+</p>
+
 ## Run locally
 
 Requirements: Node.js 22.13+ and an OpenAI API key with access to `gpt-realtime-2.1`.
